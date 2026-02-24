@@ -732,7 +732,91 @@
 
     </footer>
 
+<div id="projectModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-[999] p-6">
+    <div class="bg-[#0d1117] max-w-3xl w-full rounded-3xl border border-white/10 shadow-2xl relative p-10 overflow-y-auto max-h-[90vh]">
+        
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-500 hover:text-white">
+            <i class="fas fa-xmark text-xl"></i>
+        </button>
 
+        <h2 id="modalTitle" class="text-3xl font-bold mb-6 text-white"></h2>
+        <div id="modalContent" class="space-y-6 text-gray-300 text-sm leading-relaxed"></div>
+    </div>
+</div>
+
+<script>
+
+const projectData = {
+    "AWS WhatsApp Chatbot": `
+        <p><strong>System Design:</strong> Built as a fully serverless event-driven architecture leveraging AWS Lambda, API Gateway, and DynamoDB.</p>
+        <p><strong>Scalability Strategy:</strong> Eliminated idle infrastructure by replacing EC2 with Lambda auto-scaling, enabling burst handling without provisioning overhead.</p>
+        <p><strong>Security Model:</strong> Secrets managed through AWS Secrets Manager with runtime injection. No plaintext credentials exist in source code.</p>
+        <p><strong>Observability:</strong> CloudWatch logs + structured logging for latency monitoring and failure tracing.</p>
+        <p><strong>Business Impact:</strong> Achieved ~200ms response time with zero maintenance cost, automating 24/7 customer intake.</p>
+    `,
+
+    "Airbnb Market Analysis": `
+        <p><strong>Data Engineering:</strong> Cleaned and transformed multi-source CSV datasets using Python before ingestion into Tableau.</p>
+        <p><strong>Geospatial Modeling:</strong> Built layered maps correlating occupancy rates, seasonal price variance, and listing density.</p>
+        <p><strong>Analytical Approach:</strong> Applied ROI segmentation modeling to identify underpriced but high-demand zones.</p>
+        <p><strong>Executive Use Case:</strong> Designed for investors evaluating property acquisition along the Atlantic Seaboard.</p>
+        <p><strong>Outcome:</strong> Identified three zones with 15% above-average projected ROI.</p>
+    `,
+
+    "Churn Prediction Engine": `
+        <p><strong>Database Strategy:</strong> Implemented PostgreSQL CTE pipelines and Window Functions for behavioral segmentation.</p>
+        <p><strong>Optimization:</strong> Refactored nested subqueries into indexed CTE structures, reducing execution plan cost.</p>
+        <p><strong>Model Logic:</strong> Identified churn signals through declining activity velocity and revenue contraction metrics.</p>
+        <p><strong>Enterprise Value:</strong> Enabled targeted retention campaigns on high-risk revenue cohorts.</p>
+    `,
+
+    "Sales Pipeline Automation": `
+        <p><strong>Problem Context:</strong> Manual Excel workflows consuming 4+ hours monthly with frequent reconciliation errors.</p>
+        <p><strong>Solution Architecture:</strong> Python + Pandas ETL pipeline ingesting multiple CSV sources and normalizing schema differences.</p>
+        <p><strong>Data Cleaning:</strong> Implemented type coercion, null handling, and aggregation logic programmatically.</p>
+        <p><strong>Performance Gain:</strong> Reduced runtime to under 1 minute and eliminated human error.</p>
+    `,
+
+    "Global Retail Executive Dashboard": `
+        <p><strong>Data Model:</strong> Designed a Star Schema architecture with Fact Sales and four dimension tables for optimized query performance.</p>
+        <p><strong>Currency Normalization:</strong> Applied DAX measures for real-time FX conversion across EUR, GBP, and USD.</p>
+        <p><strong>BI Strategy:</strong> Built drill-down hierarchies for margin vs volume analysis.</p>
+        <p><strong>Stakeholder Focus:</strong> Executive-ready dashboard enabling dynamic profitability segmentation.</p>
+    `
+};
+
+function openModal(title) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalContent").innerHTML = projectData[title];
+    document.getElementById("projectModal").classList.remove("hidden");
+    document.getElementById("projectModal").classList.add("flex");
+}
+
+function closeModal() {
+    document.getElementById("projectModal").classList.add("hidden");
+    document.getElementById("projectModal").classList.remove("flex");
+}
+
+// Attach click listeners dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".glass-card h3");
+    
+    cards.forEach(titleElement => {
+        const titleText = titleElement.innerText.trim();
+        
+        if (projectData[titleText]) {
+            titleElement.style.cursor = "pointer";
+            titleElement.addEventListener("click", () => openModal(titleText));
+        }
+    });
+});
+
+// Close modal on outside click
+document.getElementById("projectModal").addEventListener("click", function(e) {
+    if (e.target === this) closeModal();
+});
+
+</script>
 
 </body>
 
