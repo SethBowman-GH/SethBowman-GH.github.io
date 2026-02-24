@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seth Bowman | Data Analyst Portfolio</title>
+    <title>Seth Bowman | Data Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
@@ -11,157 +11,148 @@
             theme: {
                 extend: {
                     colors: {
-                        sage: '#6b705c',
-                        clay: '#a44a3f',
-                        sand: '#f4f1de',
-                        stone: '#3d405b',
+                        stone: '#2d333a',     /* Deep Professional Slate */
+                        clay: '#9c5d41',      /* Muted Earthy Terracotta */
+                        linen: '#f9f8f6',     /* Clean Off-white */
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        h1, h2 { font-family: 'Playfair Display', serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#faf9f6] text-stone antialiased">
+<body class="bg-linen text-stone antialiased">
 
-    <nav class="sticky top-0 z-50 bg-[#faf9f6]/80 backdrop-blur-lg border-b border-sage/10">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <span class="text-xl font-extrabold tracking-tighter text-stone uppercase">Seth Bowman</span>
-            <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-stone/60">
-                <a href="#about" class="hover:text-clay transition-colors">Biography</a>
-                <a href="#projects" class="hover:text-clay transition-colors">Case Studies</a>
+    <nav class="sticky top-0 z-50 bg-linen/95 border-b border-stone/5 backdrop-blur-sm">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <span class="text-lg font-extrabold uppercase tracking-tighter">Seth Bowman</span>
+            <div class="flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-stone/60">
+                <a href="#about" class="hover:text-clay transition-colors">Background</a>
+                <a href="#projects" class="hover:text-clay transition-colors">Portfolio</a>
                 <a href="mailto:sbowman836@gmail.com" class="hover:text-clay transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative pt-20 pb-32 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <span class="inline-block px-4 py-1 border border-clay/30 text-clay text-[10px] font-bold uppercase tracking-widest rounded-full mb-6 text-center">Data Analyst | Computer Science Graduate</span>
-                <h1 class="text-6xl md:text-8xl font-black text-stone mb-8 leading-[0.9]">
-                    Data with <br/><span class="text-clay italic font-medium">Intuition.</span>
+    <header class="py-24 px-6 border-b border-stone/5">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="w-12 h-1 bg-clay"></div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-stone leading-[1.1] tracking-tight">
+                    Data Analyst. <br/>
+                    <span class="text-clay">Computer Scientist.</span>
                 </h1>
-                <p class="text-lg md:text-xl text-sage/80 leading-relaxed mb-10 max-w-lg">
-                    Bridging the gap between software engineering and business intelligence to turn raw data into strategic narratives.
+                <p class="text-lg text-stone/70 leading-relaxed max-w-md">
+                    Based in Cape Town. Specialized in building robust SQL architectures, Python-driven ETL automation, and strategic BI visualizations.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-stone text-sand font-bold rounded-xl hover:bg-clay transition-all transform hover:-translate-y-1 shadow-xl shadow-stone/10 text-center">Explore Work</a>
-                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border-2 border-stone/10 text-stone font-bold rounded-xl hover:bg-stone hover:text-sand transition-all text-center">LinkedIn</a>
+                <div class="flex gap-4 pt-4">
+                    <a href="#projects" class="px-8 py-4 bg-stone text-linen font-bold rounded shadow-lg hover:bg-clay transition-all">View Case Studies</a>
+                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border border-stone/20 text-stone font-bold rounded hover:bg-stone hover:text-linen transition-all">LinkedIn</a>
                 </div>
             </div>
-            <div class="order-1 md:order-2 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-4 border border-clay/20 rounded-2xl rotate-3"></div>
-                    <img src="headshot.png" alt="Seth Bowman" class="relative w-72 h-96 object-cover rounded-2xl shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-700">
+            <div class="flex justify-center md:justify-end">
+                <div class="relative group">
+                    <div class="absolute inset-0 border-2 border-clay/20 translate-x-4 translate-y-4 rounded transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></div>
+                    <img src="headshot.png" alt="Seth Bowman" class="relative w-64 h-80 object-cover rounded shadow-xl grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="py-32 bg-stone text-sand overflow-hidden relative">
-        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-3 gap-16">
-            <div class="lg:col-span-2 space-y-8">
-                <h2 class="text-5xl font-bold italic tracking-tight">The intersection of <br/>Logic and Strategy.</h2>
-                <p class="text-sand/70 text-lg leading-relaxed max-w-2xl">
-                    I am a Computer Science graduate from the University of South Africa with a background focused on software engineering, databases, and data analysis[cite: 37, 38, 39]. I specialize in bridging the gap between technical software expertise and actionable business insights[cite: 5, 7].
-                </p>
-                <p class="text-sand/70 text-lg leading-relaxed max-w-2xl">
-                    Currently, as an Intake Specialist at Nexum Group, I verify client databases to ensure data integrity for legal and recovery proceedings[cite: 12, 14]. My previous work includes managing large educational datasets for StudentCrowd UK [cite: 18, 20] and automating sales reporting at BOA Beauty Group to identify key performance trends[cite: 25, 29, 30].
-                </p>
-                <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
-                    <div>
-                        <span class="block text-clay text-2xl font-bold mb-1">SQL</span>
-                        <span class="text-[10px] uppercase tracking-widest text-sand/40">Query & Schema</span>
-                    </div>
-                    <div>
-                        <span class="block text-clay text-2xl font-bold mb-1">Python</span>
-                        <span class="text-[10px] uppercase tracking-widest text-sand/40">Automation/ETL</span>
-                    </div>
-                    <div>
-                        <span class="block text-clay text-2xl font-bold mb-1">Tableau</span>
-                        <span class="text-[10px] uppercase tracking-widest text-sand/40">BI Design</span>
-                    </div>
-                    <div>
-                        <span class="block text-clay text-2xl font-bold mb-1">Excel</span>
-                        <span class="text-[10px] uppercase tracking-widest text-sand/40">Advanced Pivot</span>
+    <section id="about" class="py-24 bg-stone text-linen">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="md:col-span-2 space-y-8">
+                    <h2 class="text-3xl font-bold tracking-tight border-b border-linen/10 pb-4">Professional Narrative</h2>
+                    <p class="text-linen/70 leading-relaxed text-lg">
+                        I am a Computer Science graduate from UNISA with a technical foundation in software engineering and cloud computing. My passion lies in transforming raw, messy datasets into high-integrity assets for business decision-making.
+                    </p>
+                    <p class="text-linen/70 leading-relaxed">
+                        Currently at <strong>Nexum Group</strong>, I manage high-volume data entry and verification, streamlining the "Intake to Recovery" pipeline for legal proceedings. My previous background includes dataset administration for <strong>StudentCrowd UK</strong> and e-commerce analytics for <strong>BOA Beauty Group</strong>, where I focused on automating manual reporting and tracking customer trends.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-6">
+                        <div>
+                            <span class="block text-clay text-xl font-bold">SQL</span>
+                            <span class="text-[10px] uppercase tracking-widest text-linen/40">Relational DB</span>
+                        </div>
+                        <div>
+                            <span class="block text-clay text-xl font-bold">Python</span>
+                            <span class="text-[10px] uppercase tracking-widest text-linen/40">Pandas / ETL</span>
+                        </div>
+                        <div>
+                            <span class="block text-clay text-xl font-bold">Tableau</span>
+                            <span class="text-[10px] uppercase tracking-widest text-linen/40">BI Design</span>
+                        </div>
+                        <div>
+                            <span class="block text-clay text-xl font-bold">Excel</span>
+                            <span class="text-[10px] uppercase tracking-widest text-linen/40">Advanced</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="bg-sand/5 p-8 rounded-3xl border border-sand/10 h-fit">
-                <h4 class="font-bold mb-6 text-clay uppercase tracking-widest text-xs">Core Competencies</h4>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li class="flex items-center"><i class="fas fa-check text-clay mr-3"></i> Data Cleaning & Validation [cite: 9]</li>
-                    <li class="flex items-center"><i class="fas fa-check text-clay mr-3"></i> Python & SQL Analytics [cite: 9]</li>
-                    <li class="flex items-center"><i class="fas fa-check text-clay mr-3"></i> Responsive Web Design [cite: 10]</li>
-                    <li class="flex items-center"><i class="fas fa-check text-clay mr-3"></i> Cloud Computing [cite: 10]</li>
-                    <li class="flex items-center"><i class="fas fa-check text-clay mr-3"></i> Shopify & E-commerce [cite: 27]</li>
-                </ul>
-                <a href="Resume.pdf" target="_blank" class="mt-8 w-full block text-center py-3 bg-clay text-sand font-bold rounded-xl hover:scale-105 transition-transform uppercase text-[10px] tracking-[0.2em]">Download CV</a>
+                
+                <div class="space-y-10">
+                    <h2 class="text-3xl font-bold tracking-tight border-b border-linen/10 pb-4">Core Skills</h2>
+                    <ul class="space-y-5 text-xs font-bold uppercase tracking-widest text-linen/60">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-clay mr-3"></i> Data Cleaning & Validation</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-clay mr-3"></i> Cloud Fundamentals (IBM)</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-clay mr-3"></i> Shopify Analytics</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-clay mr-3"></i> Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-clay mr-3"></i> Problem Solving</li>
+                    </ul>
+                    <a href="Resume.pdf" target="_blank" class="inline-block w-full text-center py-4 border-2 border-clay text-clay font-bold rounded hover:bg-clay hover:text-linen transition-all text-xs tracking-[0.2em] uppercase">Download CV</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-32 max-w-7xl mx-auto px-6">
-        <div class="mb-20 text-center md:text-left">
-            <h2 class="text-6xl font-black text-stone tracking-tighter">Case Studies</h2>
-            <p class="text-sage text-lg mt-4 italic">Practical applications of logic and technical expertise.</p>
+    <section id="projects" class="py-24 max-w-5xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-16">
+            <h2 class="text-4xl font-extrabold text-stone tracking-tight">Case Studies</h2>
+            <div class="h-px bg-stone/10 flex-grow ml-8 mb-4"></div>
         </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 text-center md:text-left">
-            <div class="group relative bg-white border border-stone/5 p-10 rounded-[2.5rem] hover:shadow-2xl hover:shadow-stone/10 transition-all duration-500 flex flex-col items-center md:items-start">
-                <div class="mb-8 w-16 h-16 bg-[#faf9f6] rounded-2xl flex items-center justify-center text-clay group-hover:bg-clay group-hover:text-sand transition-all duration-500">
-                    <i class="fas fa-map-location-dot text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-stone mb-4 tracking-tight">Airbnb Market Heatmap</h3>
-                <p class="text-stone/60 leading-relaxed mb-8 text-sm h-20">
-                    Identifying premium ROI zones in the Atlantic Seaboard through geospatial normalization of 15k+ listings.
+        
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="group">
+                <div class="h-1 bg-stone/5 group-hover:bg-clay transition-colors mb-6"></div>
+                <h3 class="text-xl font-bold mb-3">Airbnb Market Heatmap</h3>
+                <p class="text-stone/60 text-sm leading-relaxed mb-8">
+                    An interactive Tableau dashboard analyzing price clusters across the Atlantic Seaboard. Focused on geospatial data normalization.
                 </p>
-                <a href="https://public.tableau.com/shared/MF256ZT75?:display_count=n&:origin=viz_share_link" target="_blank" class="inline-flex items-center text-[10px] font-black uppercase tracking-[0.2em] text-clay group-hover:text-stone transition-colors">
-                    Review Dashboard <i class="fas fa-arrow-right ml-3 transition-transform group-hover:translate-x-2"></i>
-                </a>
+                <a href="https://public.tableau.com/shared/MF256ZT75?:display_count=n&:origin=viz_share_link" target="_blank" class="text-[11px] font-black uppercase tracking-widest border-b-2 border-clay pb-1 hover:text-clay transition-all inline-block">View Tableau &rarr;</a>
             </div>
 
-            <div class="group relative bg-white border border-stone/5 p-10 rounded-[2.5rem] hover:shadow-2xl hover:shadow-stone/10 transition-all duration-500 flex flex-col items-center md:items-start">
-                <div class="mb-8 w-16 h-16 bg-[#faf9f6] rounded-2xl flex items-center justify-center text-clay group-hover:bg-clay group-hover:text-sand transition-all duration-500">
-                    <i class="fas fa-database text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-stone mb-4 tracking-tight">Churn Predictor (SQL)</h3>
-                <p class="text-stone/60 leading-relaxed mb-8 text-sm h-20">
-                    Advanced PostgreSQL implementation utilizing Window Functions to isolate high-risk revenue loss.
+            <div class="group">
+                <div class="h-1 bg-stone/5 group-hover:bg-clay transition-colors mb-6"></div>
+                <h3 class="text-xl font-bold mb-3">Churn Prediction (SQL)</h3>
+                <p class="text-stone/60 text-sm leading-relaxed mb-8">
+                    Architecture for identifying revenue loss using window functions and CTEs to isolate high-risk user segments.
                 </p>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/2_analysis.sql" target="_blank" class="inline-flex items-center text-[10px] font-black uppercase tracking-[0.2em] text-clay group-hover:text-stone transition-colors">
-                    View Queries <i class="fas fa-arrow-right ml-3 transition-transform group-hover:translate-x-2"></i>
-                </a>
+                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/2_analysis.sql" target="_blank" class="text-[11px] font-black uppercase tracking-widest border-b-2 border-clay pb-1 hover:text-clay transition-all inline-block">View SQL Script &rarr;</a>
             </div>
 
-            <div class="group relative bg-white border border-stone/5 p-10 rounded-[2.5rem] hover:shadow-2xl hover:shadow-stone/10 transition-all duration-500 flex flex-col items-center md:items-start">
-                <div class="mb-8 w-16 h-16 bg-[#faf9f6] rounded-2xl flex items-center justify-center text-clay group-hover:bg-clay group-hover:text-sand transition-all duration-500">
-                    <i class="fab fa-python text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-stone mb-4 tracking-tight">ETL Sales Pipeline</h3>
-                <p class="text-stone/60 leading-relaxed mb-8 text-sm h-20">
-                    Python-driven automation of manual auditing workflows, increasing efficiency for high-volume sales datasets[cite: 30].
+            <div class="group">
+                <div class="h-1 bg-stone/5 group-hover:bg-clay transition-colors mb-6"></div>
+                <h3 class="text-xl font-bold mb-3">ETL Sales Pipeline</h3>
+                <p class="text-stone/60 text-sm leading-relaxed mb-8">
+                    Automation scripts built with Python/Pandas to audit, clean, and aggregate monthly e-commerce sales reports.
                 </p>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/DataCleaning_Visualization.ipynb" target="_blank" class="inline-flex items-center text-[10px] font-black uppercase tracking-[0.2em] text-clay group-hover:text-stone transition-colors">
-                    Open Notebook <i class="fas fa-arrow-right ml-3 transition-transform group-hover:translate-x-2"></i>
-                </a>
+                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/DataCleaning_Visualization.ipynb" target="_blank" class="text-[11px] font-black uppercase tracking-widest border-b-2 border-clay pb-1 hover:text-clay transition-all inline-block">View Notebook &rarr;</a>
             </div>
         </div>
     </section>
 
-    <footer class="py-24 border-t border-sage/10 text-center bg-sand/30 px-6">
-        <h2 class="text-4xl font-bold text-stone mb-10 tracking-tight text-center">Let's build something <br/><span class="text-clay italic text-center">insightful.</span></h2>
+    <footer class="py-20 border-t border-stone/5 bg-linen text-center px-6">
+        <h3 class="text-2xl font-extrabold text-stone mb-8">Let's connect.</h3>
         <div class="flex justify-center space-x-12 mb-12">
-            <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="text-stone/40 hover:text-clay transition-all text-3xl"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/SethBowman-GH" target="_blank" class="text-stone/40 hover:text-clay transition-all text-3xl"><i class="fab fa-github"></i></a>
-            <a href="mailto:sbowman836@gmail.com" class="text-stone/40 hover:text-clay transition-all text-3xl"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="text-stone/40 hover:text-clay transition-colors text-2xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/SethBowman-GH" target="_blank" class="text-stone/40 hover:text-clay transition-colors text-2xl"><i class="fab fa-github"></i></a>
+            <a href="mailto:sbowman836@gmail.com" class="text-stone/40 hover:text-clay transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[10px] font-black uppercase tracking-[0.4em] text-sage/40 text-center">&copy; 2026 Seth Emanuelle Bowman | Cape Town</p>
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-stone/40 tracking-widest">&copy; 2026 Seth Bowman | Cape Town, ZA</p>
     </footer>
 
 </body>
