@@ -17,7 +17,7 @@
                         deepText: '#1D1D1F',
                     },
                     fontFamily: {
-                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
                     }
                 }
             }
@@ -32,10 +32,34 @@
         }
     </script>
     <style>
-        body { background-color: #F5F5F7; color: #1D1D1F; letter-spacing: -0.015em; }
-        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(0, 0, 0, 0.05); }
-        .modal-overlay { background: rgba(245, 245, 247, 0.9); backdrop-filter: blur(15px); }
-        code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #F5F5F7; 
+            color: #1D1D1F; 
+            letter-spacing: -0.022em; /* Specific Apple-style tracking */
+        }
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(0, 0, 0, 0.05); 
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 122, 255, 0.4);
+            transform: translateY(-4px);
+        }
+        .gradient-text { 
+            background: linear-gradient(180deg, #1D1D1F 0%, #434343 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        @keyframes border-pulse {
+            0%, 100% { border-color: rgba(0, 122, 255, 0.2); }
+            50% { border-color: rgba(0, 122, 255, 0.6); }
+        }
+        .animate-border-pulse { animation: border-pulse 3s infinite; }
+        code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
     </style>
 </head>
 <body class="antialiased">
@@ -43,7 +67,7 @@
     <nav class="fixed w-full z-50 border-b border-black/5 bg-white/70 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <span class="text-lg font-bold tracking-tight uppercase">Seth Bowman</span>
-            <div class="flex space-x-8 text-[11px] font-semibold uppercase tracking-widest text-gray-500">
+            <div class="flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-gray-500">
                 <a href="#about" class="hover:text-techBlue transition-all">About</a>
                 <a href="#projects" class="hover:text-techBlue transition-all">Projects</a>
                 <a href="mailto:sbowman836@gmail.com" class="hover:text-techBlue transition-all">Contact</a>
@@ -57,19 +81,19 @@
                 <div class="inline-flex items-center px-3 py-1 rounded-full bg-black/5 text-black text-[10px] font-bold uppercase tracking-widest">
                     Data Analyst & Systems Architect
                 </div>
-                <h1 class="text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight text-deepText">
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-[1.05] tracking-tight text-deepText">
                     Clean Code. <br/><span class="text-gray-400">Deep Insights.</span>
                 </h1>
                 <p class="text-xl text-gray-500 max-w-lg leading-relaxed font-medium">
                     BSc Computer Science graduate specializing in SQL architectures, Python automation, and scalable cloud solutions.
                 </p>
                 <div class="flex gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-semibold rounded-full hover:opacity-90 transition-all">View Portfolio</a>
-                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 bg-black text-white font-semibold rounded-full transition-all">LinkedIn</a>
+                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-full hover:opacity-90 transition-all">View Portfolio</a>
+                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 bg-black text-white font-bold rounded-full transition-all">LinkedIn</a>
                 </div>
             </div>
             <div class="lg:col-span-5">
-                <img src="Assets/headshot.png" alt="Seth Bowman" class="w-full h-auto rounded-[2rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-black/5">
+                <img src="Assets/headshot.png" alt="Seth Bowman" class="w-full h-auto rounded-[2.5rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-black/5">
             </div>
         </div>
     </header>
@@ -77,105 +101,103 @@
     <section id="about" class="max-w-6xl mx-auto px-6 pb-24">
         <div class="glass-card rounded-[3rem] p-10 md:p-16">
             <div class="grid md:grid-cols-2 gap-16">
-                <div class="space-y-6">
+                <div class="space-y-6 text-deepText">
                     <h2 class="text-xs font-bold uppercase tracking-widest text-techBlue">Biography</h2>
-                    <h3 class="text-3xl font-bold text-deepText">Technical Narrative</h3>
-                    <p class="text-gray-500 leading-relaxed">
+                    <h3 class="text-3xl font-extrabold tracking-tight">Technical Narrative</h3>
+                    <p class="text-gray-600 leading-relaxed font-medium">
                         Computer Science graduate with a strong foundation in software engineering and cloud computing. Currently at <strong>Nexum Group</strong>, managing data verification and intake pipelines.
                     </p>
-                    <p class="text-gray-500 leading-relaxed">
+                    <p class="text-gray-600 leading-relaxed font-medium">
                         Track record includes dataset administration for <strong>StudentCrowd UK</strong> and automating sales reporting for <strong>BOA Beauty Group</strong>.
                     </p>
                 </div>
                 <div class="space-y-8">
                     <h2 class="text-xs font-bold uppercase tracking-widest text-techBlue">Primary Tech Stack</h2>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="p-4 rounded-2xl bg-black/5 flex flex-col items-center">
-                            <i class="fas fa-database text-techBlue text-xl mb-2"></i>
+                    <div class="grid grid-cols-2 gap-4 text-deepText">
+                        <div class="p-6 rounded-3xl bg-black/5 flex flex-col items-center">
+                            <i class="fas fa-database text-techBlue text-2xl mb-3"></i>
                             <span class="text-[10px] font-bold uppercase tracking-widest">SQL</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-black/5 flex flex-col items-center">
-                            <i class="fab fa-python text-techBlue text-xl mb-2"></i>
+                        <div class="p-6 rounded-3xl bg-black/5 flex flex-col items-center">
+                            <i class="fab fa-python text-techBlue text-2xl mb-3"></i>
                             <span class="text-[10px] font-bold uppercase tracking-widest">Python</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-black/5 flex flex-col items-center">
-                            <i class="fas fa-chart-pie text-techBlue text-xl mb-2"></i>
+                        <div class="p-6 rounded-3xl bg-black/5 flex flex-col items-center">
+                            <i class="fas fa-chart-pie text-techBlue text-2xl mb-3"></i>
                             <span class="text-[10px] font-bold uppercase tracking-widest">Tableau</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-black/5 flex flex-col items-center">
-                            <i class="fas fa-cloud text-techBlue text-xl mb-2"></i>
+                        <div class="p-6 rounded-3xl bg-black/5 flex flex-col items-center">
+                            <i class="fas fa-cloud text-techBlue text-2xl mb-3"></i>
                             <span class="text-[10px] font-bold uppercase tracking-widest">AWS</span>
                         </div>
                     </div>
-                    <a href="Assets/Resume.pdf" target="_blank" class="block w-full text-center py-4 bg-white border border-black/10 text-deepText font-bold uppercase text-[10px] tracking-widest rounded-xl hover:bg-black hover:text-white transition-all">Download Full Resume</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
-        <h2 class="text-4xl font-bold tracking-tight text-deepText mb-12">Engineering Case Studies</h2>
+        <h2 class="text-4xl font-extrabold tracking-tight text-deepText mb-12">Engineering Case Studies</h2>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div onclick="toggleModal('modal-aws')" class="glass-card p-8 rounded-[2.5rem] hover:scale-[1.02] transition-all cursor-pointer group">
-                <i class="fas fa-cloud text-techBlue text-xl mb-6"></i>
-                <h3 class="font-bold text-xl mb-2">AWS WhatsApp Pipeline</h3>
-                <p class="text-gray-500 text-sm mb-4">Serverless automation.</p>
-                <span class="text-techBlue text-xs font-bold uppercase tracking-widest">Case Study →</span>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div onclick="toggleModal('modal-aws')" class="glass-card p-10 rounded-[2.5rem] cursor-pointer">
+                <i class="fas fa-cloud text-techBlue text-xl mb-8"></i>
+                <h3 class="text-2xl font-bold mb-3">AWS WhatsApp Bot</h3>
+                <p class="text-gray-500 text-sm font-medium leading-relaxed mb-6">Serverless automation achieving ~200ms latency with zero-idle costs.</p>
+                <span class="text-techBlue font-bold text-xs uppercase tracking-widest">Architecture Breakdown →</span>
             </div>
 
-            <div class="glass-card p-8 rounded-[2.5rem] hover:scale-[1.02] transition-all group">
-                <i class="fas fa-map-location-dot text-techBlue text-xl mb-6"></i>
-                <h3 class="font-bold text-xl mb-2">Airbnb Analysis</h3>
-                <p class="text-gray-500 text-sm mb-4">Investment ROI mapping.</p>
-                <a href="https://public.tableau.com/shared/MF256ZT75" target="_blank" class="text-techBlue text-xs font-bold uppercase tracking-widest">Launch Dashboard →</a>
+            <div onclick="toggleModal('modal-churn')" class="glass-card p-10 rounded-[2.5rem] cursor-pointer">
+                <i class="fas fa-terminal text-techBlue text-xl mb-8"></i>
+                <h3 class="text-2xl font-bold mb-3">Churn Predictor</h3>
+                <p class="text-gray-500 text-sm font-medium leading-relaxed mb-6">Identifying revenue leakage via PostgreSQL Window Functions.</p>
+                <span class="text-techBlue font-bold text-xs uppercase tracking-widest">View Logic →</span>
             </div>
 
-            <div onclick="toggleModal('modal-churn')" class="glass-card p-8 rounded-[2.5rem] hover:scale-[1.02] transition-all cursor-pointer group">
-                <i class="fas fa-database text-techBlue text-xl mb-6"></i>
-                <h3 class="font-bold text-xl mb-2">Churn Predictor</h3>
-                <p class="text-gray-500 text-sm mb-4">PostgreSQL Engine.</p>
-                <span class="text-techBlue text-xs font-bold uppercase tracking-widest">Case Study →</span>
-            </div>
-
-            <div class="glass-card p-8 rounded-[2.5rem] hover:scale-[1.02] transition-all group">
-                <i class="fab fa-python text-techBlue text-xl mb-6"></i>
-                <h3 class="font-bold text-xl mb-2">Sales ETL Pipeline</h3>
-                <p class="text-gray-500 text-sm mb-4">Python/Pandas automation.</p>
-                <a href="#" class="text-techBlue text-xs font-bold uppercase tracking-widest">View Notebook →</a>
-            </div>
-
-            <div onclick="toggleModal('modal-retail')" class="glass-card p-8 rounded-[2.5rem] hover:scale-[1.02] transition-all cursor-pointer group">
-                <i class="fas fa-chart-simple text-techBlue text-xl mb-6"></i>
-                <h3 class="font-bold text-xl mb-2">Global Retail Dashboard</h3>
-                <p class="text-gray-500 text-sm mb-4">Star Schema architecture.</p>
-                <span class="text-techBlue text-xs font-bold uppercase tracking-widest">Case Study →</span>
-            </div>
-        </div>
-
-        <div class="mt-20">
-            <h3 class="text-2xl font-bold text-gray-400 mb-8">In Development</h3>
-            <div class="glass-card p-10 rounded-[2.5rem] border border-techBlue/30 animate-border-pulse">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <span class="px-2 py-1 bg-techBlue text-white text-[9px] font-bold uppercase rounded-full">Active</span>
-                            <h4 class="text-2xl font-bold text-deepText">Real-Time Fraud Risk Monitor</h4>
-                        </div>
-                        <p class="text-gray-500 max-w-xl">Kafka/Spark streaming architecture for detecting anomalies in invoice data.</p>
-                    </div>
-                    <a href="https://github.com/SethBowman-GH" target="_blank" class="px-6 py-3 bg-black text-white text-xs font-bold rounded-full">Follow Github</a>
-                </div>
+            <div class="glass-card p-10 rounded-[2.5rem]">
+                <i class="fas fa-map-location-dot text-techBlue text-xl mb-8"></i>
+                <h3 class="text-2xl font-bold mb-3">Airbnb Analysis</h3>
+                <p class="text-gray-500 text-sm font-medium leading-relaxed mb-6">Investment ROI mapping for the Atlantic Seaboard.</p>
+                <a href="https://public.tableau.com/shared/MF256ZT75" target="_blank" class="text-techBlue font-bold text-xs uppercase tracking-widest">Live Dashboard →</a>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-black/5 text-center px-6">
-        <div class="flex justify-center space-x-12 mb-8 text-gray-400">
-            <a href="#" class="hover:text-techBlue"><i class="fab fa-linkedin-in text-xl"></i></a>
-            <a href="#" class="hover:text-techBlue"><i class="fab fa-github text-xl"></i></a>
+    <section class="max-w-6xl mx-auto px-6 pb-32">
+        <h2 class="text-2xl font-bold text-gray-400 mb-8">In Development</h2>
+        <div class="glass-card p-12 rounded-[3rem] border-techBlue/20 animate-border-pulse">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <span class="px-2 py-1 bg-techBlue text-white text-[9px] font-bold uppercase rounded-full">Active Build</span>
+                        <h4 class="text-3xl font-bold text-deepText">Real-Time Fraud Risk Monitor</h4>
+                    </div>
+                    <p class="text-gray-500 text-lg font-medium">Streaming architecture for detecting anomalies in invoice and legal claims data.</p>
+                </div>
+                <a href="https://github.com/SethBowman-GH" target="_blank" class="px-10 py-4 bg-black text-white font-bold rounded-full">Follow Progress</a>
+            </div>
         </div>
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">&copy; 2026 SETH BOWMAN | CAPE TOWN</p>
+    </section>
+
+    <div id="modal-aws" class="fixed inset-0 z-[100] hidden modal-overlay overflow-y-auto">
+        <div class="min-h-screen px-6 py-20">
+            <div class="max-w-4xl mx-auto bg-white rounded-[3rem] p-12 relative shadow-2xl">
+                <button onclick="toggleModal('modal-aws')" class="absolute top-10 right-10 text-gray-400 hover:text-black"><i class="fas fa-times text-2xl"></i></button>
+                <h2 class="text-techBlue text-xs font-bold uppercase tracking-widest mb-4">Architecture Deep-Dive</h2>
+                <h1 class="text-4xl font-extrabold text-deepText mb-8">AWS Serverless Pipeline</h1>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                    By choosing <strong>AWS Lambda</strong> over EC2, I achieved zero-idle costs. The system executes only when a Twilio webhook is received, ensuring maximum scalability without persistent infrastructure overhead.
+                </p>
+                <div class="bg-appleGray rounded-3xl p-8 border border-black/5 text-sm">
+                    <h4 class="font-bold mb-4">Core Decision: Zero-Idle Compute</h4>
+                    <p class="text-gray-500">Security was managed via AWS Secrets Manager for runtime credential injection, eliminating hardcoded environment variables.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-20 border-t border-black/5 text-center text-gray-400 font-bold uppercase tracking-[0.4em] text-[10px]">
+        &copy; 2026 Seth Bowman | Cape Town, ZA
     </footer>
 
 </body>
