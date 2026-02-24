@@ -12,9 +12,11 @@
             theme: {
                 extend: {
                     colors: {
-                        techBlue: '#0A84FF',
-                        deepSpace: '#010409',
-                        glass: 'rgba(255, 255, 255, 0.03)',
+                        techBlue: '#007AFF',
+                        surface: '#F5F7FA',
+                        card: '#FFFFFF',
+                        textMain: '#1D1D1F',
+                        textSub: '#424245',
                     }
                 }
             }
@@ -22,13 +24,13 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #010409; color: #e6edf3; }
-        .glass-card { background: rgba(23, 23, 23, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #0A84FF, #5AC8FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F5F7FA; color: #1D1D1F; }
+        .glass-card { background: #FFFFFF; border: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
+        .gradient-text { background: linear-gradient(90deg, #007AFF, #5AC8FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
         @keyframes border-pulse {
-            0%, 100% { border-color: rgba(10, 132, 255, 0.3); box-shadow: 0 0 0 rgba(10, 132, 255, 0); }
-            50% { border-color: rgba(10, 132, 255, 0.8); box-shadow: 0 0 15px rgba(10, 132, 255, 0.2); }
+            0%, 100% { border-color: rgba(0, 122, 255, 0.2); box-shadow: 0 0 0 rgba(0, 122, 255, 0); }
+            50% { border-color: rgba(0, 122, 255, 0.5); box-shadow: 0 0 20px rgba(0, 122, 255, 0.1); }
         }
         .animate-border-pulse {
             animation: border-pulse 3s infinite;
@@ -37,10 +39,10 @@
 </head>
 <body class="antialiased">
 
-    <nav class="fixed w-full z-50 border-b border-white/10 bg-deepSpace/80 backdrop-blur-md">
+    <nav class="fixed w-full z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <span class="text-xl font-extrabold tracking-tighter uppercase gradient-text">Seth Bowman</span>
-            <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+            <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-500">
                 <a href="#about" class="hover:text-techBlue transition-all">About</a>
                 <a href="#projects" class="hover:text-techBlue transition-all">Projects</a>
                 <a href="mailto:sbowman836@gmail.com" class="hover:text-techBlue transition-all">Contact</a>
@@ -55,21 +57,21 @@
                     <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-techBlue opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-techBlue"></span></span>
                     <span>Data Analyst & Computer Science Undergraduate</span>
                 </div>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-textMain">
                     Data Science & <br/><span class="gradient-text">Statistical Insights.</span>
                 </h1>
-                <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+                <p class="text-lg text-textSub max-w-lg leading-relaxed">
                     Computer Science undergraduate specializing in predictive modeling, exploratory data analysis (EDA), and turning raw datasets into strategic business decisions.
                 </p>
                 <div class="flex gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-xl hover:shadow-[0_0_20px_rgba(10,132,255,0.4)] transition-all transform hover:-translate-y-1">View Insights</a>
-                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border border-white/10 hover:bg-white/5 font-bold rounded-xl transition-all">LinkedIn</a>
+                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-xl hover:shadow-[0_10px_20px_rgba(0,122,255,0.3)] transition-all transform hover:-translate-y-1">View Insights</a>
+                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border border-gray-200 hover:bg-gray-50 font-bold rounded-xl transition-all">LinkedIn</a>
                 </div>
             </div>
             <div class="lg:col-span-5 flex justify-center">
                 <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-techBlue to-cyan-400 rounded-3xl blur opacity-25 transition duration-1000"></div>
-                    <img src="Assets/headshot.png" alt="Seth Bowman" class="relative w-64 h-80 object-cover rounded-3xl transition-all duration-500 shadow-2xl border border-white/10">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-techBlue to-cyan-400 rounded-3xl blur opacity-20 transition duration-1000"></div>
+                    <img src="Assets/headshot.png" alt="Seth Bowman" class="relative w-64 h-80 object-cover rounded-3xl transition-all duration-500 shadow-xl border border-white">
                 </div>
             </div>
         </div>
@@ -80,35 +82,35 @@
             <div class="grid md:grid-cols-2 gap-16">
                 <div class="space-y-6">
                     <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Biography</h2>
-                    <h3 class="text-3xl font-bold text-white">The Analytical Lens</h3>
-                    <p class="text-gray-400 leading-relaxed">
+                    <h3 class="text-3xl font-bold text-textMain">The Analytical Lens</h3>
+                    <p class="text-textSub leading-relaxed">
                         Computer Science undergraduate focused on the intersection of software engineering and quantitative analysis. Currently at <strong>Nexum Group</strong>, where I maintain data integrity and optimize verification pipelines.
                     </p>
-                    <p class="text-gray-400 leading-relaxed">
-                        My background involves leveraging Python and SQL to uncover hidden trends for <strong>StudentCrowd UK</strong> and driving operational efficiency for <strong>BOA Beauty Group</strong> through automated reporting.
+                    <p class="text-textSub leading-relaxed">
+                        My background involves leveraging Python and SQL to uncover hidden trends for <strong>StudentCrowd UK</strong> and driving operational efficiency through automated reporting.
                     </p>
                 </div>
                 <div class="space-y-8">
                     <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Analysis Toolkit</h2>
                     <div class="grid grid-cols-2 gap-6">
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
                             <i class="fab fa-python text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Pandas/NumPy</span>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">Pandas/NumPy</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
                             <i class="fas fa-database text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">SQL (PostgreSQL)</span>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">PostgreSQL</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
                             <i class="fas fa-chart-line text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Statistical Modeling</span>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">Stats Modeling</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
                             <i class="fas fa-chart-pie text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Tableau/Power BI</span>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">BI Visualization</span>
                         </div>
                     </div>
-                    <a href="Assets/Resume.pdf" target="_blank" class="block w-full text-center py-4 bg-white/5 hover:bg-white/10 text-white font-black uppercase text-[10px] tracking-[0.3em] rounded-xl border border-white/10 transition-all">View Academic CV</a>
+                    <a href="Assets/Resume.pdf" target="_blank" class="block w-full text-center py-4 bg-gray-900 hover:bg-black text-white font-black uppercase text-[10px] tracking-[0.3em] rounded-xl transition-all">View Academic CV</a>
                 </div>
             </div>
         </div>
@@ -117,75 +119,45 @@
     <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
         <div class="flex items-center justify-between mb-12">
             <div>
-                <h2 class="text-4xl font-extrabold tracking-tighter text-white">Data Case Studies</h2>
-                <p class="text-gray-400 mt-2 text-sm">Quantifying impact through rigorous analysis and visualization.</p>
+                <h2 class="text-4xl font-extrabold tracking-tighter text-textMain">Data Case Studies</h2>
+                <p class="text-textSub mt-2 text-sm">Quantifying impact through rigorous analysis and visualization.</p>
             </div>
             <div class="h-1 w-24 bg-techBlue rounded-full"></div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <i class="fas fa-user-minus text-9xl text-techBlue"></i>
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i class="fas fa-brain text-9xl text-techBlue"></i>
                 </div>
                 <div class="relative z-10">
                     <div class="flex justify-between items-start mb-6">
                         <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-brain text-xl"></i>
+                            <i class="fas fa-user-minus text-xl"></i>
                         </div>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Predictive Analytics</span>
+                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Predictive Analytics</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-white">Churn Prediction Engine</h3>
-                    <p class="text-gray-400 text-sm mb-6">Identifying revenue leakage through behavior modeling.</p>
+                    <h3 class="text-2xl font-bold mb-2 text-textMain">Churn Prediction Engine</h3>
+                    <p class="text-textSub text-sm mb-6">Identifying revenue leakage through behavior modeling.</p>
                     <div class="space-y-3 mb-8">
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                        <div class="flex items-start space-x-3 text-sm text-textSub">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
-                            <span><strong>Analysis:</strong> Mapped churn signals via activity velocity and revenue contraction.</span>
+                            <span>Mapped churn signals via activity velocity and contraction metrics.</span>
                         </div>
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                        <div class="flex items-start space-x-3 text-sm text-textSub">
                             <i class="fas fa-chart-line text-techBlue mt-1"></i>
-                            <span><strong>Impact:</strong> Segmented <span class="text-white font-bold">high-risk cohorts</span> for retention strategies.</span>
+                            <span>Segmented <span class="font-bold text-textMain">high-risk cohorts</span> for retention strategies.</span>
                         </div>
                     </div>
-                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/ChurnPredictor/2_analysis.sql" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
+                    <a href="#" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:underline">
                         <span>View Analysis Logic</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <i class="fas fa-map-location-dot text-9xl text-techBlue"></i>
-                </div>
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-chart-area text-xl"></i>
-                        </div>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Geospatial Science</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-white">Airbnb Market Intelligence</h3>
-                    <p class="text-gray-400 text-sm mb-6">Investment ROI mapping for the Atlantic Seaboard.</p>
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
-                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
-                            <span><strong>Modeling:</strong> Layered occupancy rates with seasonal price volatility.</span>
-                        </div>
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
-                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
-                            <span><strong>Outcome:</strong> Found 3 zones with <span class="text-white font-bold">15% higher ROI</span> than regional average.</span>
-                        </div>
-                    </div>
-                    <a href="https://public.tableau.com/shared/MF256ZT75?:display_count=n&:origin=viz_share_link" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
-                        <span>Launch Dashboard</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                     <i class="fas fa-chart-simple text-9xl text-techBlue"></i>
                 </div>
                 <div class="relative z-10">
@@ -193,52 +165,22 @@
                         <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
                             <i class="fas fa-project-diagram text-xl"></i>
                         </div>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Data Modeling</span>
+                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Data Modeling</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-white">Global Retail Analytics</h3>
-                    <p class="text-gray-400 text-sm mb-6">Normalizing multi-currency reporting via Star Schema.</p>
+                    <h3 class="text-2xl font-bold mb-2 text-textMain">Global Retail Analytics</h3>
+                    <p class="text-textSub text-sm mb-6">Normalizing multi-currency reporting via Star Schema.</p>
                     <div class="space-y-3 mb-8">
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                        <div class="flex items-start space-x-3 text-sm text-textSub">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
-                            <span><strong>Solution:</strong> DAX currency normalization for EUR, GBP, and USD reporting.</span>
+                            <span>DAX currency normalization for EUR, GBP, and USD reporting.</span>
                         </div>
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                        <div class="flex items-start space-x-3 text-sm text-textSub">
                             <i class="fas fa-chart-line text-techBlue mt-1"></i>
-                            <span><strong>Feature:</strong> Multi-level drill-down for <span class="text-white font-bold">Profit vs. Volume</span> analysis.</span>
+                            <span>Enabled <span class="font-bold text-textMain">Profit vs. Volume</span> drill-down hierarchies.</span>
                         </div>
                     </div>
-                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/tree/main/GlobalRetailDashboard" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
+                    <a href="#" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:underline">
                         <span>View Data Model</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <i class="fab fa-python text-9xl text-techBlue"></i>
-                </div>
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-code-branch text-xl"></i>
-                        </div>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">ETL Pipelines</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-white">Sales Pipeline Engineering</h3>
-                    <p class="text-gray-400 text-sm mb-6">Aggregating disparate sources for financial modeling.</p>
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
-                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
-                            <span><strong>Process:</strong> Python/Pandas script to ingest and clean 4+ hours of manual data.</span>
-                        </div>
-                        <div class="flex items-start space-x-3 text-sm text-gray-300">
-                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
-                            <span><strong>Efficiency:</strong> Reduced aggregation time by <span class="text-white font-bold">95%</span>.</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/ETL%20Sales%20Pipeline/DataCleaning_Visualization.ipynb" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
-                        <span>View Insights</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -247,112 +189,91 @@
 
         <div class="flex items-center justify-between mb-12 mt-20">
             <h2 class="text-2xl font-bold tracking-tighter text-gray-400">In Development</h2>
-            <div class="h-[1px] w-full ml-6 bg-white/10"></div>
+            <div class="h-[1px] w-full ml-6 bg-gray-200"></div>
         </div>
 
         <div class="space-y-8">
-            <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse">
+            <div class="glass-card p-10 rounded-3xl border border-techBlue/30 animate-border-pulse">
                 <div class="grid md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-8 space-y-4">
                         <div class="flex items-center space-x-3 mb-2">
                             <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
-                            <h3 class="text-2xl font-bold text-white">Anomalous Claims Detector</h3>
+                            <h3 class="text-2xl font-bold text-textMain">Anomalous Claims Detector</h3>
                         </div>
-                        <p class="text-gray-400 leading-relaxed">
-                            A real-time monitoring system designed to flag fraud in invoice and legal data. This leverages statistical outlier detection to ensure data integrity at scale for <strong>Nexum Group</strong>.
+                        <p class="text-textSub leading-relaxed">
+                            A real-time monitoring system designed to flag fraud in invoice data. Leveraging statistical outlier detection to ensure data integrity for <strong>Nexum Group</strong>.
                         </p>
                     </div>
-                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
+                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-gray-100 pl-8">
                         <i class="fas fa-shield-halved text-4xl text-techBlue mb-4"></i>
-                        <a href="https://github.com/SethBowman-GH" target="_blank" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold uppercase tracking-widest text-white transition-all">Follow Progress</a>
+                        <a href="#" class="px-6 py-2 bg-gray-900 hover:bg-black text-white rounded-lg text-xs font-bold uppercase tracking-widest transition-all">Follow Progress</a>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-card p-10 rounded-3xl border border-white/10">
+            <div class="glass-card p-10 rounded-3xl">
                 <div class="grid md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-8 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">Customer Lifetime Value (CLV) Analysis</h3>
-                        <p class="text-gray-400 leading-relaxed">
-                            Directly ties quantitative research to revenue strategy. By segmenting high-value cohorts, I recommended campaigns with a projected <span class="text-white font-bold">15% revenue increase</span>.
+                        <h3 class="text-2xl font-bold text-textMain">Customer Lifetime Value (CLV) Analysis</h3>
+                        <p class="text-textSub leading-relaxed">
+                            Tying quantitative research to revenue strategy. By segmenting high-value cohorts, I recommended campaigns with a projected <span class="text-techBlue font-bold">15% revenue increase</span>.
                         </p>
-                        <p class="text-xs font-bold uppercase tracking-widest text-techBlue">Skills: SQL Aggregation, Python Modeling, Business Metrics.</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-techBlue">SQL Aggregation • Python Modeling • ROI Forecasting</p>
                     </div>
-                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
-                        <i class="fas fa-users-line text-4xl text-gray-600 mb-4"></i>
-                        <span class="text-[10px] font-bold uppercase text-gray-500 tracking-widest">Statistical ROI</span>
+                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-gray-100 pl-8">
+                        <i class="fas fa-users-line text-4xl text-gray-300 mb-4"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-card p-10 rounded-3xl border border-white/10">
+            <div class="glass-card p-10 rounded-3xl">
                 <div class="grid md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-8 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">Time-Series Sales Forecasting</h3>
-                        <p class="text-gray-400 leading-relaxed">
-                            Building a model predicting monthly sales with <span class="text-white font-bold">95% accuracy</span>. This transforms historical data into actionable inventory planning.
+                        <h3 class="text-2xl font-bold text-textMain">Time-Series Sales Forecasting</h3>
+                        <p class="text-textSub leading-relaxed">
+                            Building a model predicting monthly sales with <span class="text-techBlue font-bold">95% accuracy</span>. Transforming historical data into actionable inventory planning.
                         </p>
-                        <p class="text-xs font-bold uppercase tracking-widest text-techBlue">Skills: Facebook Prophet, Scikit-learn, SQL.</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-techBlue">Facebook Prophet • Scikit-learn • Time-series EDA</p>
                     </div>
-                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
-                        <i class="fas fa-crystal-ball text-4xl text-gray-600 mb-4"></i>
-                        <span class="text-[10px] font-bold uppercase text-gray-500 tracking-widest">Predictive Modeling</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-10 rounded-3xl border border-white/10">
-                <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <div class="md:col-span-8 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">KPI Automation Dashboard</h3>
-                        <p class="text-gray-400 leading-relaxed">
-                            End-to-end dashboarding from extraction to delivery. Empowering decision-makers by cutting reporting lag from 4 hours to under 10 minutes.
-                        </p>
-                        <p class="text-xs font-bold uppercase tracking-widest text-techBlue">Skills: Python ETL, BI Tools, Dashboard Design.</p>
-                    </div>
-                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
-                        <i class="fas fa-bolt text-4xl text-gray-600 mb-4"></i>
-                        <span class="text-[10px] font-bold uppercase text-gray-500 tracking-widest">Automated Insight</span>
+                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-gray-100 pl-8">
+                        <i class="fas fa-crystal-ball text-4xl text-gray-300 mb-4"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center px-6">
-        <h3 class="text-2xl font-black mb-8 text-white">Connect.</h3>
+    <footer class="py-20 bg-white border-t border-gray-200 text-center px-6">
+        <h3 class="text-2xl font-black mb-8 text-textMain">Connect.</h3>
         <div class="flex justify-center space-x-12 mb-12">
-            <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="text-gray-600 hover:text-techBlue transition-all text-2xl"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/SethBowman-GH" target="_blank" class="text-gray-600 hover:text-techBlue transition-all text-2xl"><i class="fab fa-github"></i></a>
-            <a href="mailto:sbowman836@gmail.com" class="text-gray-600 hover:text-techBlue transition-all text-2xl"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="text-gray-400 hover:text-techBlue transition-all text-2xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-techBlue transition-all text-2xl"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-gray-400 hover:text-techBlue transition-all text-2xl"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-700">&copy; 2026 Seth Bowman | Cape Town, ZA</p>
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">&copy; 2026 Seth Bowman | Cape Town, ZA</p>
     </footer>
 
-    <div id="projectModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-[999] p-6">
-        <div class="bg-[#0d1117] max-w-3xl w-full rounded-3xl border border-white/10 shadow-2xl relative p-10 overflow-y-auto max-h-[90vh]">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-500 hover:text-white">
+    <div id="projectModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-[999] p-6">
+        <div class="bg-white max-w-2xl w-full rounded-3xl shadow-2xl relative p-10 overflow-y-auto max-h-[85vh]">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black">
                 <i class="fas fa-xmark text-xl"></i>
             </button>
-            <h2 id="modalTitle" class="text-3xl font-bold mb-6 text-white"></h2>
-            <div id="modalContent" class="space-y-6 text-gray-300 text-sm leading-relaxed"></div>
+            <h2 id="modalTitle" class="text-3xl font-bold mb-6 text-textMain"></h2>
+            <div id="modalContent" class="text-textSub leading-relaxed space-y-4"></div>
         </div>
     </div>
 
 <script>
 const projectData = {
-    "Churn Prediction Engine": `<p><strong>Analysis Approach:</strong> Identified churn signals through declining activity velocity and revenue contraction metrics.</p><p><strong>Business Impact:</strong> Enabled targeted retention campaigns on high-risk revenue cohorts by segmenting behavioral patterns.</p>`,
-    "Airbnb Market Intelligence": `<p><strong>Methodology:</strong> Built layered geospatial maps correlating occupancy rates, seasonal price variance, and listing density.</p><p><strong>Result:</strong> Identified three zones with 15% above-average projected ROI for investors.</p>`,
-    "Global Retail Analytics": `<p><strong>Data Modeling:</strong> Designed a Star Schema to optimize query performance across multi-currency transactions.</p><p><strong>Outcome:</strong> Enabled dynamic profitability segmentation (EUR/GBP/USD) for executive-ready reporting.</p>`,
-    "Sales Pipeline Engineering": `<p><strong>Optimization:</strong> Refactored manual 4-hour aggregation workflows into an automated Python pipeline.</p><p><strong>Impact:</strong> Eliminated calculation errors and reduced processing time by 95%.</p>`,
-    "Customer Lifetime Value (CLV) Analysis": `<p><strong>Insight:</strong> Demonstrates ability to segment customers and prioritize high-value users to influence business growth.</p>`,
-    "Time-Series Sales Forecasting": `<p><strong>Predictive Power:</strong> Uses historical trends to forecast future demand with 95% accuracy for inventory optimization.</p>`,
-    "KPI Automation Dashboard": `<p><strong>End-to-End:</strong> From automated extraction to visual insight delivery, reducing reporting latency for stakeholders.</p>`
+    "Churn Prediction Engine": "Detailed analysis using PostgreSQL window functions to identify behavior markers for users at high risk of churning.",
+    "Global Retail Analytics": "Executive-level Power BI modeling utilizing a Star Schema to consolidate international sales data into a unified reporting standard.",
+    "Customer Lifetime Value (CLV) Analysis": "Using statistical segmentation to prioritize high-value user acquisitions and drive long-term business growth.",
+    "Time-Series Sales Forecasting": "Applying advanced time-series decomposition to account for seasonality and noise in retail sales data."
 };
 
 function openModal(title) {
     document.getElementById("modalTitle").innerText = title;
-    document.getElementById("modalContent").innerHTML = projectData[title];
+    document.getElementById("modalContent").innerText = projectData[title];
     document.getElementById("projectModal").classList.remove("hidden");
     document.getElementById("projectModal").classList.add("flex");
 }
@@ -364,17 +285,12 @@ function closeModal() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const titles = document.querySelectorAll(".glass-card h3");
-    titles.forEach(titleElement => {
-        const titleText = titleElement.innerText.trim();
-        if (projectData[titleText]) {
-            titleElement.style.cursor = "pointer";
-            titleElement.addEventListener("click", () => openModal(titleText));
+    titles.forEach(el => {
+        if (projectData[el.innerText.trim()]) {
+            el.style.cursor = "pointer";
+            el.addEventListener("click", () => openModal(el.innerText.trim()));
         }
     });
-});
-
-document.getElementById("projectModal").addEventListener("click", function(e) {
-    if (e.target === this) closeModal();
 });
 </script>
 </body>
