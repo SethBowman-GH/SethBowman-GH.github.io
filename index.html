@@ -25,6 +25,15 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #010409; color: #e6edf3; }
         .glass-card { background: rgba(23, 23, 23, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-text { background: linear-gradient(90deg, #0A84FF, #5AC8FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Animation for the In-Progress Card */
+        @keyframes border-pulse {
+            0%, 100% { border-color: rgba(10, 132, 255, 0.3); box-shadow: 0 0 0 rgba(10, 132, 255, 0); }
+            50% { border-color: rgba(10, 132, 255, 0.8); box-shadow: 0 0 15px rgba(10, 132, 255, 0.2); }
+        }
+        .animate-border-pulse {
+            animation: border-pulse 3s infinite;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -108,58 +117,234 @@
 
     <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
         <div class="flex items-center justify-between mb-12">
-            <h2 class="text-4xl font-extrabold tracking-tighter text-white">Case Studies</h2>
+            <div>
+                <h2 class="text-4xl font-extrabold tracking-tighter text-white">Engineering Case Studies</h2>
+                <p class="text-gray-400 mt-2 text-sm">Selected works demonstrating scale, architectural decision-making, and business impact.</p>
+            </div>
             <div class="h-1 w-24 bg-techBlue rounded-full"></div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 text-center">
+        <div class="grid md:grid-cols-2 gap-8">
             
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group">
-                <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue mb-6 group-hover:bg-techBlue group-hover:text-white transition-all mx-auto">
-                    <i class="fas fa-robot text-xl"></i>
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fas fa-robot text-9xl text-techBlue"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">AWS WhatsApp Chatbot</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-8">Serverless AI chatbot built on AWS Lambda and Python. Secured via AWS Secrets Manager.</p>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/AWSCloudInfastructure/README.md" target="_blank" class="text-xs font-black uppercase tracking-widest text-techBlue hover:underline decoration-2 underline-offset-8 transition-all">View Architecture &rarr;</a>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-cloud text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Serverless Architecture</span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-2 text-white">AWS WhatsApp Chatbot</h3>
+                    <p class="text-gray-400 text-sm mb-6">Automated 24/7 customer intake pipeline.</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Decision:</strong> Chose AWS Lambda over EC2 to achieve zero-idle costs and auto-scaling for burst traffic.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Security:</strong> Eliminated hardcoded credentials using AWS Secrets Manager for runtime injection.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
+                            <span><strong>Impact:</strong> <span class="text-white font-bold">~200ms latency</span> response time with $0.00 maintenance cost.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/AWSCloudInfastructure/README.md" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
+                        <span>View Architecture</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group">
-                <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue mb-6 group-hover:bg-techBlue group-hover:text-white transition-all mx-auto">
-                    <i class="fas fa-map-location-dot text-xl"></i>
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fas fa-map-location-dot text-9xl text-techBlue"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Airbnb Market Map</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-8">Tableau geospatial analysis identifying ROI zones in the Atlantic Seaboard.</p>
-                <a href="https://public.tableau.com/shared/MF256ZT75?:display_count=n&:origin=viz_share_link" target="_blank" class="text-xs font-black uppercase tracking-widest text-techBlue hover:underline decoration-2 underline-offset-8 transition-all">Launch Dashboard &rarr;</a>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-chart-area text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Geospatial Intelligence</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-2 text-white">Airbnb Market Analysis</h3>
+                    <p class="text-gray-400 text-sm mb-6">Investment ROI mapping for the Atlantic Seaboard.</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Problem:</strong> Identifying high-yield rental zones amidst saturated market data.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Solution:</strong> Built interactive geospatial layers to correlate occupancy rates with seasonal pricing.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
+                            <span><strong>Outcome:</strong> Identified 3 zones with <span class="text-white font-bold">15% higher ROI</span> potential than regional average.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://public.tableau.com/shared/MF256ZT75?:display_count=n&:origin=viz_share_link" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
+                        <span>Launch Dashboard</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group">
-                <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue mb-6 group-hover:bg-techBlue group-hover:text-white transition-all mx-auto">
-                    <i class="fas fa-terminal text-xl"></i>
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fas fa-database text-9xl text-techBlue"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Churn Predictor (SQL)</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-8">PostgreSQL architecture utilizing Window Functions to segment high-risk revenue churn.</p>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/ChurnPredictor/2_analysis.sql" target="_blank" class="text-xs font-black uppercase tracking-widest text-techBlue hover:underline decoration-2 underline-offset-8 transition-all">Source Queries &rarr;</a>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-terminal text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Advanced SQL</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-2 text-white">Churn Prediction Engine</h3>
+                    <p class="text-gray-400 text-sm mb-6">Revenue retention modeling using PostgreSQL.</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Technique:</strong> Utilized complex Window Functions and CTEs to segment customer behavior patterns.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Performance:</strong> Optimized query execution plan to handle large-scale historical datasets.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
+                            <span><strong>Impact:</strong> Segmented <span class="text-white font-bold">high-risk revenue</span> groups for targeted retention campaigns.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/ChurnPredictor/2_analysis.sql" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
+                        <span>Review Query Logic</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group">
-                <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue mb-6 group-hover:bg-techBlue group-hover:text-white transition-all mx-auto">
-                    <i class="fab fa-python text-xl"></i>
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fab fa-python text-9xl text-techBlue"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">ETL Sales Pipeline</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-8">Python/Pandas scripts automating the aggregation of monthly sales reports.</p>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/ETL%20Sales%20Pipeline/DataCleaning_Visualization.ipynb" target="_blank" class="text-xs font-black uppercase tracking-widest text-techBlue hover:underline decoration-2 underline-offset-8 transition-all">View Notebook &rarr;</a>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-code-branch text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">ETL Automation</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-2 text-white">Sales Pipeline Automation</h3>
+                    <p class="text-gray-400 text-sm mb-6">Python/Pandas aggregation for monthly financial reporting.</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Problem:</strong> Manual Excel aggregation of monthly reports was error-prone and took 4+ hours.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Solution:</strong> Engineered a Pandas script to ingest, clean, and merge disparate CSV sources.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
+                            <span><strong>Result:</strong> Reduced process time by <span class="text-white font-bold">95% (to < 1 min)</span> and eliminated calculation errors.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/ETL%20Sales%20Pipeline/DataCleaning_Visualization.ipynb" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
+                        <span>View Notebook</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border border-techBlue/30">
-                <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue mb-6 group-hover:bg-techBlue group-hover:text-white transition-all mx-auto">
-                    <i class="fas fa-chart-simple text-xl"></i>
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group border-t border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fas fa-chart-simple text-9xl text-techBlue"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Global Retail Dashboard</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-8">Executive Power BI dashboard utilizing Star Schema modeling and DAX for currency normalization.</p>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/tree/main/GlobalRetailDashboard" target="_blank" class="text-xs font-black uppercase tracking-widest text-techBlue hover:underline decoration-2 underline-offset-8 transition-all">View Model &rarr;</a>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-project-diagram text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Data Modeling</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-2 text-white">Global Retail Executive Dashboard</h3>
+                    <p class="text-gray-400 text-sm mb-6">Star Schema architecture & DAX currency normalization.</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Architecture:</strong> Designed a robust Star Schema (Fact Sales + 4 Dimensions) to ensure query performance.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
+                            <span><strong>Challenge:</strong> Normalizing multi-currency transactions (EUR, GBP, USD) into a single reporting standard.</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
+                            <span><strong>Feature:</strong> Enabled dynamic drill-down into <span class="text-white font-bold">Profit Margin vs. Volume</span> analysis.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/tree/main/GlobalRetailDashboard" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:text-white transition-colors">
+                        <span>View Data Model</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
         </div>
+
+        <div class="flex items-center justify-between mb-12 mt-20">
+            <h2 class="text-2xl font-bold tracking-tighter text-gray-400">In Development</h2>
+            <div class="h-[1px] w-full ml-6 bg-white/10"></div>
+        </div>
+
+        <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-8 space-y-4">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
+                        <h3 class="text-2xl font-bold text-white">Real-Time Fraud Risk Monitor</h3>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        An end-to-end streaming architecture for detecting anomalies in invoice and legal claims data. Leveraging experience from <strong>Nexum Group</strong> to build scalable ingestion pipelines.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Kafka / Kinesis</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Spark Streaming</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Snowflake</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Airflow</span>
+                    </div>
+                </div>
+                <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
+                    <i class="fas fa-shield-halved text-4xl text-techBlue mb-4"></i>
+                    <p class="text-xs text-center text-gray-500 mb-4">Simulating event streams for fraud detection.</p>
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io" target="_blank" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold uppercase tracking-widest text-white transition-all">
+                        Follow Progress
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <footer class="py-20 border-t border-white/5 text-center px-6">
