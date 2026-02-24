@@ -1,320 +1,223 @@
 <!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark"> <head>
+    <link rel="icon" type="image/png" href="Assets/flavicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Bowman | Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<html lang="en" class="scroll-smooth">
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enables manual toggling
+            theme: {
+                extend: {
+                    colors: {
+                        techBlue: '#0A84FF',
+                        // Using CSS variables to allow color swapping
+                        deepSpace: 'var(--bg-color)', 
+                        glass: 'var(--glass-bg)',
+                    }
+                }
+            }
+        }
+    </script>
 
-<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
 
-    <link rel="icon" type="image/png" href="Assets/flavicon.png">
+        /* --- THEME VARIABLES --- */
+        :root {
+            /* Light Mode Defaults */
+            --bg-color: #f3f4f6;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(0, 0, 0, 0.1);
+            --card-border: rgba(0, 0, 0, 0.05);
+        }
 
-    <meta charset="UTF-8">
+        /* Dark Mode Overrides (Matching your original colors) */
+        .dark {
+            --bg-color: #010409;
+            --text-main: #e6edf3;
+            --text-muted: #9ca3af;
+            --glass-bg: rgba(23, 23, 23, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    <title>Seth Bowman | Data Analyst</title>
+        /* Glass Card adapts to variables */
+        .glass-card { 
+            background: var(--glass-bg); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid var(--glass-border); 
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
 
-    <script src="https://cdn.tailwindcss.com"></script>
+        .gradient-text { 
+            background: linear-gradient(90deg, #0A84FF, #5AC8FA); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        /* Global overrides to handle "text-white" and "text-gray-400" in Light Mode 
+           without changing HTML classes */
+        html:not(.dark) .text-white { color: #111827 !important; }
+        html:not(.dark) .text-gray-400 { color: #4b5563 !important; }
+        html:not(.dark) .text-gray-300 { color: #374151 !important; }
+        html:not(.dark) .text-gray-500 { color: #6b7280 !important; }
+        html:not(.dark) .bg-white\/5 { background-color: rgba(0,0,0,0.05) !important; }
+        html:not(.dark) .bg-white\/10 { background-color: rgba(0,0,0,0.1) !important; }
+        html:not(.dark) .border-white\/10 { border-color: rgba(0,0,0,0.1) !important; }
+        html:not(.dark) .border-white\/5 { border-color: rgba(0,0,0,0.1) !important; }
+        
+        /* Nav Bar Background */
+        nav { transition: background-color 0.3s ease, border-color 0.3s ease; }
+        html:not(.dark) nav { background-color: rgba(255, 255, 255, 0.8) !important; border-bottom: 1px solid rgba(0,0,0,0.1); }
 
-    <script>
-
-        tailwind.config = {
-
-            theme: {
-
-                extend: {
-
-                    colors: {
-
-                        techBlue: '#0A84FF',
-
-                        deepSpace: '#010409',
-
-                        glass: 'rgba(255, 255, 255, 0.03)',
-
-                    }
-
-                }
-
-            }
-
-        }
-
-    </script>
-
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #010409; color: #e6edf3; }
-
-        .glass-card { background: rgba(23, 23, 23, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-
-        .gradient-text { background: linear-gradient(90deg, #0A84FF, #5AC8FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
-        
-
-        /* Animation for the In-Progress Card */
-
-        @keyframes border-pulse {
-
-            0%, 100% { border-color: rgba(10, 132, 255, 0.3); box-shadow: 0 0 0 rgba(10, 132, 255, 0); }
-
-            50% { border-color: rgba(10, 132, 255, 0.8); box-shadow: 0 0 15px rgba(10, 132, 255, 0.2); }
-
-        }
-
-        .animate-border-pulse {
-
-            animation: border-pulse 3s infinite;
-
-        }
-
-    </style>
-
+        /* Animation for the In-Progress Card */
+        @keyframes border-pulse {
+            0%, 100% { border-color: rgba(10, 132, 255, 0.3); box-shadow: 0 0 0 rgba(10, 132, 255, 0); }
+            50% { border-color: rgba(10, 132, 255, 0.8); box-shadow: 0 0 15px rgba(10, 132, 255, 0.2); }
+        }
+        .animate-border-pulse { animation: border-pulse 3s infinite; }
+    </style>
 </head>
 
 <body class="antialiased">
 
-    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 border-b border-white/10 bg-deepSpace/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="text-xl font-extrabold tracking-tighter uppercase gradient-text">Seth Bowman</span>
+            <div class="flex items-center space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#about" class="hover:text-techBlue transition-all">About</a>
+                <a href="#projects" class="hover:text-techBlue transition-all">Projects</a>
+                <a href="mailto:sbowman836@gmail.com" class="hover:text-techBlue transition-all">Contact</a>
+                
+                <button id="theme-toggle" type="button" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-techBlue focus:ring-offset-2 bg-gray-200 dark:bg-gray-700">
+                    <span class="sr-only">Use setting</span>
+                    <span id="toggle-circle" aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0 dark:translate-x-5"></span>
+                </button>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-techBlue/10 border border-techBlue/20 text-techBlue text-[10px] font-black uppercase tracking-widest">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-techBlue opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-techBlue"></span></span>
+                    <span>Data Analyst & Computer Science Graduate</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white">
+                    Data Analyst & <br/><span class="gradient-text">Systems Architect.</span>
+                </h1>
+                <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+                    BSc Computer Science graduate specializing in SQL architectures, Python automation, and scalable cloud solutions.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-xl hover:shadow-[0_0_20px_rgba(10,132,255,0.4)] transition-all transform hover:-translate-y-1">View Portfolio</a>
+                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border border-white/10 hover:bg-white/5 font-bold rounded-xl transition-all text-white">LinkedIn</a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-techBlue to-cyan-400 rounded-3xl blur opacity-25 transition duration-1000"></div>
+                    <img src="Assets/headshot.png" alt="Seth Bowman" class="relative w-64 h-80 object-cover rounded-3xl transition-all duration-500 shadow-2xl border border-white/10">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="glass-card rounded-[2.5rem] p-10 md:p-16">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-6">
+                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Biography</h2>
+                    <h3 class="text-3xl font-bold text-white">Technical Narrative</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Computer Science graduate with a strong foundation in software engineering and cloud computing. Currently at <strong>Nexum Group</strong>, managing data verification and intake pipelines.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Track record includes dataset administration for <strong>StudentCrowd UK</strong> and automating sales reporting for <strong>BOA Beauty Group</strong>.
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Primary Tech Stack</h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                            <i class="fas fa-database text-techBlue text-2xl mb-3"></i>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">SQL</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                            <i class="fab fa-python text-techBlue text-2xl mb-3"></i>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Python</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                            <i class="fas fa-chart-pie text-techBlue text-2xl mb-3"></i>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Tableau</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+                            <i class="fas fa-cloud text-techBlue text-2xl mb-3"></i>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">AWS</span>
+                        </div>
+                    </div>
+                    <a href="Assets/Resume.pdf" target="_blank" class="block w-full text-center py-4 bg-white/5 hover:bg-white/10 text-white font-black uppercase text-[10px] tracking-[0.3em] rounded-xl border border-white/10 transition-all">Download Full Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
+        <div class="flex items-center justify-between mb-12">
+            <div>
+                <h2 class="text-4xl font-extrabold tracking-tighter text-white">Engineering Case Studies</h2>
+                <p class="text-gray-400 mt-2 text-sm">Selected works demonstrating scale, architectural decision-making, and business impact.</p>
+            </div>
+            <div class="h-1 w-24 bg-techBlue rounded-full"></div>
+        </div>
+
+        <div class="flex items-center justify-between mb-12 mt-20">
+            <h2 class="text-2xl font-bold tracking-tighter text-gray-400">In Development</h2>
+            <div class="h-[1px] w-full ml-6 bg-white/10"></div>
+        </div>
+
+        <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-8 space-y-4">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
+                        <h3 class="text-2xl font-bold text-white">Real-Time Fraud Risk Monitor</h3>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        An end-to-end streaming architecture for detecting anomalies in invoice and legal claims data. Leveraging experience from <strong>Nexum Group</strong> to build scalable ingestion pipelines.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Kafka / Kinesis</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Spark Streaming</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Snowflake</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Airflow</span>
+                    </div>
+                </div>
+                <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
+                    <i class="fas fa-shield-halved text-4xl text-techBlue mb-4"></i>
+                    <p class="text-xs text-center text-gray-500 mb-4">Simulating event streams for fraud detection.</p>
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io" target="_blank" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold uppercase tracking-widest text-white transition-all">
+                        Follow Progress
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    <nav class="fixed w-full z-50 border-b border-white/10 bg-deepSpace/80 backdrop-blur-md">
-
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-
-            <span class="text-xl font-extrabold tracking-tighter uppercase gradient-text">Seth Bowman</span>
-
-            <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
-
-                <a href="#about" class="hover:text-techBlue transition-all">About</a>
-
-                <a href="#projects" class="hover:text-techBlue transition-all">Projects</a>
-
-                <a href="mailto:sbowman836@gmail.com" class="hover:text-techBlue transition-all">Contact</a>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-    <!-- HEADER -->
-
-    <header class="relative pt-32 pb-20 px-6">
-
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
-
-            <div class="lg:col-span-7 space-y-6">
-
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-techBlue/10 border border-techBlue/20 text-techBlue text-[10px] font-black uppercase tracking-widest">
-
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-techBlue opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-techBlue"></span></span>
-
-                    <span>Data Analyst & Computer Science Graduate</span>
-
-                </div>
-
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white">
-
-                    Data Analyst & <br/><span class="gradient-text">Systems Architect.</span>
-
-                </h1>
-
-                <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
-
-                    BSc Computer Science graduate specializing in SQL architectures, Python automation, and scalable cloud solutions.
-
-                </p>
-
-                <div class="flex gap-4">
-
-                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-xl hover:shadow-[0_0_20px_rgba(10,132,255,0.4)] transition-all transform hover:-translate-y-1">View Portfolio</a>
-
-                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border border-white/10 hover:bg-white/5 font-bold rounded-xl transition-all">LinkedIn</a>
-
-                </div>
-
-            </div>
-
-            <div class="lg:col-span-5 flex justify-center">
-
-                <div class="relative group">
-
-                    <div class="absolute -inset-1 bg-gradient-to-r from-techBlue to-cyan-400 rounded-3xl blur opacity-25 transition duration-1000"></div>
-
-                    <img src="Assets/headshot.png" alt="Seth Bowman" class="relative w-64 h-80 object-cover rounded-3xl transition-all duration-500 shadow-2xl border border-white/10">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!-- ABOUT -->
-
-    <section id="about" class="max-w-6xl mx-auto px-6 pb-24">
-
-        <div class="glass-card rounded-[2.5rem] p-10 md:p-16">
-
-            <div class="grid md:grid-cols-2 gap-16">
-
-                <div class="space-y-6">
-
-                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Biography</h2>
-
-                    <h3 class="text-3xl font-bold text-white">Technical Narrative</h3>
-
-                    <p class="text-gray-400 leading-relaxed">
-
-                        Computer Science graduate with a strong foundation in software engineering and cloud computing. Currently at <strong>Nexum Group</strong>, managing data verification and intake pipelines.
-
-                    </p>
-
-                    <p class="text-gray-400 leading-relaxed">
-
-                        Track record includes dataset administration for <strong>StudentCrowd UK</strong> and automating sales reporting for <strong>BOA Beauty Group</strong>.
-
-                    </p>
-
-                </div>
-
-                <div class="space-y-8">
-
-                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Primary Tech Stack</h2>
-
-                    <div class="grid grid-cols-2 gap-6">
-
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
-
-                            <i class="fas fa-database text-techBlue text-2xl mb-3"></i>
-
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">SQL</span>
-
-                        </div>
-
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
-
-                            <i class="fab fa-python text-techBlue text-2xl mb-3"></i>
-
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Python</span>
-
-                        </div>
-
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
-
-                            <i class="fas fa-chart-pie text-techBlue text-2xl mb-3"></i>
-
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Tableau</span>
-
-                        </div>
-
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
-
-                            <i class="fas fa-cloud text-techBlue text-2xl mb-3"></i>
-
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">AWS</span>
-
-                        </div>
-
-                    </div>
-
-                    <a href="Assets/Resume.pdf" target="_blank" class="block w-full text-center py-4 bg-white/5 hover:bg-white/10 text-white font-black uppercase text-[10px] tracking-[0.3em] rounded-xl border border-white/10 transition-all">Download Full Resume</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- PROJECTS -->
-
-    <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
-
-        <div class="flex items-center justify-between mb-12">
-
-            <div>
-
-                <h2 class="text-4xl font-extrabold tracking-tighter text-white">Engineering Case Studies</h2>
-
-                <p class="text-gray-400 mt-2 text-sm">Selected works demonstrating scale, architectural decision-making, and business impact.</p>
-
-            </div>
-
-            <div class="h-1 w-24 bg-techBlue rounded-full"></div>
-
-        </div>
-
-        <!-- Existing projects here ... -->
-
-        <div class="flex items-center justify-between mb-12 mt-20">
-
-            <h2 class="text-2xl font-bold tracking-tighter text-gray-400">In Development</h2>
-
-            <div class="h-[1px] w-full ml-6 bg-white/10"></div>
-
-        </div>
-
-        <!-- Existing In-Development Card -->
-
-        <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse">
-
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-
-                <div class="md:col-span-8 space-y-4">
-
-                    <div class="flex items-center space-x-3 mb-2">
-
-                        <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
-
-                        <h3 class="text-2xl font-bold text-white">Real-Time Fraud Risk Monitor</h3>
-
-                    </div>
-
-                    <p class="text-gray-400 leading-relaxed">
-
-                        An end-to-end streaming architecture for detecting anomalies in invoice and legal claims data. Leveraging experience from <strong>Nexum Group</strong> to build scalable ingestion pipelines.
-
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 pt-2">
-
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Kafka / Kinesis</span>
-
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Spark Streaming</span>
-
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Snowflake</span>
-
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Airflow</span>
-
-                    </div>
-
-                </div>
-
-                <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
-
-                    <i class="fas fa-shield-halved text-4xl text-techBlue mb-4"></i>
-
-                    <p class="text-xs text-center text-gray-500 mb-4">Simulating event streams for fraud detection.</p>
-
-                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io" target="_blank" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold uppercase tracking-widest text-white transition-all">
-
-                        Follow Progress
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- NEW IN-DEV PROJECTS -->
-
-        <!-- Customer Lifetime Value (CLV) Analysis -->
         <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse mt-8">
             <div class="grid md:grid-cols-12 gap-8 items-center">
                 <div class="md:col-span-8 space-y-4">
@@ -342,7 +245,6 @@
             </div>
         </div>
 
-        <!-- Forecasting Project -->
         <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse mt-8">
             <div class="grid md:grid-cols-12 gap-8 items-center">
                 <div class="md:col-span-8 space-y-4">
@@ -370,5 +272,29 @@
             </div>
         </div>
 
-        <!-- KPI Automation Dashboard -->
-        <div class="glass-card p-
+    </section>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Check Local Storage or System Preference on Load
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.remove('dark');
+        } else {
+            htmlElement.classList.add('dark');
+        }
+
+        // Toggle Event
+        toggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
