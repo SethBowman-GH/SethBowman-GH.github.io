@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <link rel="icon" type="image/png" href="Assets/flavicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seth Bowman | Data Analyst</title>
+    <title>Seth Bowman | Data Engineering & Analytics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -23,186 +22,172 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { 
-            font-family: 'Inter', -apple-system, sans-serif; 
-            background-color: #ffffff; 
-            color: #1d1d1f; 
-            -webkit-font-smoothing: antialiased;
-        }
-        /* Relative fluid containers */
-        .fluid-container { width: 92%; margin: 0 auto; max-width: 1600px; }
-        .bento-card {
-            background: #f5f5f7;
-            border-radius: 1.8rem;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            height: 100%;
-        }
-        .bento-card:hover {
-            background: #fbfbfd;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-            transform: translateY(-4px);
-        }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: #1d1d1f; -webkit-font-smoothing: antialiased; }
+        .fluid-container { width: 90%; margin: 0 auto; max-width: 1400px; }
+        .section-padding { padding: 120px 0; }
+        .project-tag { font-size: 12px; font-weight: 700; color: #0066cc; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; display: block; }
+        .difficulty-card { background: #fff1f1; border-left: 4px solid #ff3b30; padding: 1.5rem; border-radius: 0 1rem 1rem 0; margin-top: 2rem; }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="fluid-container h-12 flex items-center justify-between">
-            <span class="text-lg font-semibold tracking-tight">Seth Bowman</span>
-            <div class="flex space-x-10 text-[12px] font-normal text-appleGray">
-                <a href="#about" class="hover:text-appleBlue transition-colors">About</a>
-                <a href="#projects" class="hover:text-appleBlue transition-colors">Projects</a>
-                <a href="mailto:sbowman836@gmail.com" class="text-appleBlue font-medium">Contact</a>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="fluid-container h-14 flex items-center justify-between">
+            <span class="text-xl font-bold tracking-tight">Seth Bowman</span>
+            <div class="flex space-x-10 text-xs font-medium text-appleGray">
+                <a href="#projects" class="hover:text-appleBlue">Case Studies</a>
+                <a href="#indev" class="hover:text-appleBlue">In-Development</a>
+                <a href="mailto:sbowman836@gmail.com" class="text-appleBlue">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative pt-40 pb-24">
-        <div class="fluid-container grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1">
-                <h2 class="text-appleBlue font-semibold text-xl tracking-tight mb-4">Data Analyst & Systems Architect</h2>
-                <h1 class="text-[clamp(3rem,6vw,5rem)] font-bold tracking-tighter leading-[1.05] mb-8">
-                    Engineering insight <br><span class="text-appleGray">through data.</span>
+    <header class="pt-48 pb-32">
+        <div class="fluid-container grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h1 class="text-[clamp(3.5rem,7vw,6rem)] font-bold tracking-tighter leading-none mb-10">
+                    Precision. <br><span class="text-appleGray">In every byte.</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-appleGray leading-relaxed max-w-[85%] mb-10">
-                    BSc Computer Science graduate specializing in SQL architectures, Python automation, and scalable cloud solutions.
+                <p class="text-2xl text-appleGray leading-relaxed max-w-xl">
+                    Computer Science graduate currently managing data pipelines at <strong>Nexum Group</strong>. I build systems that turn noise into narrative.
                 </p>
-                <div class="flex gap-6">
-                    <a href="#projects" class="px-8 py-3.5 bg-appleBlack text-white rounded-full font-medium hover:bg-black transition-all shadow-lg shadow-black/10">View Portfolio</a>
-                    <a href="https://www.linkedin.com" target="_blank" class="px-8 py-3.5 border border-gray-200 rounded-full font-medium hover:bg-gray-50 transition-all">LinkedIn</a>
-                </div>
             </div>
-            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-                <div class="relative w-[75%] lg:w-[85%] aspect-[4/5]">
-                    <img src="Assets/headshot.png" alt="Seth Bowman" class="w-full h-full object-cover rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
-                </div>
+            <div class="flex justify-end">
+                <img src="Assets/headshot.png" alt="Seth" class="w-[80%] aspect-[4/5] object-cover rounded-[3rem] shadow-3xl grayscale">
             </div>
         </div>
     </header>
 
-    <section id="about" class="py-24 border-t border-gray-100 bg-[#fbfbfd]">
-        <div class="fluid-container grid lg:grid-cols-12 gap-16">
-            <div class="lg:col-span-8 space-y-8">
-                <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-appleGray">Technical Narrative</h3>
-                <p class="text-[clamp(1.5rem,3vw,2.2rem)] font-semibold tracking-tight leading-tight">
-                    Currently at <span class="text-appleBlue">Nexum Group</span>, managing data verification and intake pipelines for high-stakes legal environments.
-                </p>
-                <p class="text-xl text-appleGray leading-relaxed">
-                    With experience spanning dataset administration for <strong>StudentCrowd UK</strong> and automation for <strong>BOA Beauty Group</strong>, I specialize in reducing manual overhead through engineered logic.
-                </p>
-            </div>
-            <div class="lg:col-span-4 flex flex-col justify-end">
-                <div class="p-8 bento-card border border-gray-200/50 bg-white">
-                    <h4 class="font-bold mb-6">Primary Stack</h4>
-                    <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                        <div class="text-sm font-medium"><i class="fas fa-database mr-2 text-appleBlue"></i> SQL</div>
-                        <div class="text-sm font-medium"><i class="fab fa-python mr-2 text-appleBlue"></i> Python</div>
-                        <div class="text-sm font-medium"><i class="fas fa-cloud mr-2 text-appleBlue"></i> AWS</div>
-                        <div class="text-sm font-medium"><i class="fas fa-chart-bar mr-2 text-appleBlue"></i> Power BI</div>
+    <main id="projects">
+        
+        <section class="section-padding border-t border-gray-100">
+            <div class="fluid-container">
+                <div class="grid lg:grid-cols-12 gap-16">
+                    <div class="lg:col-span-5">
+                        <span class="project-tag">Analytics & Modeling</span>
+                        <h2 class="text-5xl font-bold tracking-tight mb-8">Global Retail Executive Dashboard</h2>
+                        <p class="text-xl text-appleGray font-medium">Standardizing multi-currency performance for global stakeholders.</p>
+                    </div>
+                    <div class="lg:col-span-7 space-y-10">
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">The Thought Process</h4>
+                            <p class="text-appleGray leading-relaxed italic">"How do we compare a €50,000 sale in Berlin to a $55,000 sale in New York without losing the local context?"</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">The Reason</h4>
+                            <p class="text-appleGray leading-relaxed">Executive teams were struggling with disparate CSV reports where exchange rates were applied inconsistently. We needed a single source of truth that allowed for dynamic currency switching.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Execution</h4>
+                            <p class="text-appleGray leading-relaxed">I engineered a <strong>Star Schema</strong> consisting of 1 Fact table (Sales) and 4 Dimension tables (Geography, Product, Time, Currency). Using DAX, I created a measures library that normalized all transactions to a base currency (USD) while maintaining a slicer for local viewing.</p>
+                        </div>
+                        <div class="difficulty-card">
+                            <h4 class="text-red-600 font-bold mb-2">The Difficulty</h4>
+                            <p class="text-sm text-red-800 italic leading-relaxed">Handling "SCD Type 2" (Slowly Changing Dimensions) was the hurdle. When a product changed category mid-year, the historical sales needed to remain in the old category while new sales went to the new one. I solved this by mapping transactions to a Surrogate Key in the product dimension rather than the Product ID.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="py-24">
+        <section class="section-padding bg-appleCard">
+            <div class="fluid-container">
+                <div class="grid lg:grid-cols-12 gap-16">
+                    <div class="lg:col-span-5">
+                        <span class="project-tag">Cloud Architecture</span>
+                        <h2 class="text-5xl font-bold tracking-tight mb-8">AWS WhatsApp Intake Pipeline</h2>
+                        <p class="text-xl text-appleGray font-medium">Turning mobile messages into structured database entries.</p>
+                    </div>
+                    <div class="lg:col-span-7 space-y-10">
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">The Reason</h4>
+                            <p class="text-appleGray leading-relaxed">Nexum Group needed a way to intake legal claim data from users 24/7 without paying for a full-time support staff or maintaining expensive, idle servers.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Execution</h4>
+                            <p class="text-appleGray leading-relaxed">I built a <strong>Serverless Architecture</strong> using AWS Lambda and API Gateway. Messages are received via a Twilio webhook, processed by a Python-based Lambda function, and stored in an RDS instance. This ensures the company only pays when a message is actually sent.</p>
+                        </div>
+                        <div class="difficulty-card">
+                            <h4 class="text-red-600 font-bold mb-2">The Difficulty</h4>
+                            <p class="text-sm text-red-800 italic leading-relaxed">Concurrency and cold starts. Initially, the first message of the day had a 2-second delay as the Lambda "woke up." I optimized this by slimming the deployment package (removing unused libraries) and implementing a Provisioned Concurrency plan for peak hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="fluid-container">
+                <div class="grid lg:grid-cols-12 gap-16">
+                    <div class="lg:col-span-5">
+                        <span class="project-tag">Python & ETL</span>
+                        <h2 class="text-5xl font-bold tracking-tight mb-8">Financial Data Automation</h2>
+                        <p class="text-xl text-appleGray font-medium">Replacing 4 hours of manual labor with 45 seconds of code.</p>
+                    </div>
+                    <div class="lg:col-span-7 space-y-10">
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">The Thought Process</h4>
+                            <p class="text-appleGray leading-relaxed">Manual Excel work isn't just slow; it’s an invitation for human error. If a process is repeatable, it must be automated.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Execution</h4>
+                            <p class="text-appleGray leading-relaxed">Developed a Python ETL script using **Pandas** and **Openpyxl**. The script ingests raw, messy CSV exports from Shopify and Amazon, applies complex cleaning logic (regex for SKU standardization), and outputs a formatted executive summary.</p>
+                        </div>
+                        <div class="difficulty-card">
+                            <h4 class="text-red-600 font-bold mb-2">The Difficulty</h4>
+                            <p class="text-sm text-red-800 italic leading-relaxed">Data drift. The third-party platforms would occasionally change their header names without notice, breaking the script. I implemented a **Schema Validation** layer using Pydantic to catch these errors early and alert the user which column was missing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="indev" class="py-32 bg-[#161617] text-white">
         <div class="fluid-container">
-            <div class="mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Case Studies</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bento-card p-10 flex flex-col">
-                    <div class="mb-auto">
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
-                            <i class="fas fa-chart-line text-appleBlue text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 leading-tight">Global Retail Dashboard</h3>
-                        <p class="text-appleGray leading-relaxed mb-6">Star Schema architecture with DAX currency normalization across EUR, GBP, and USD for executive reporting.</p>
+            <h2 class="text-6xl font-bold tracking-tighter mb-20">One more thing...</h2>
+            
+            <div class="space-y-32">
+                <div class="grid lg:grid-cols-2 gap-20">
+                    <div>
+                        <span class="text-appleBlue font-bold text-xs uppercase tracking-widest">Active Research</span>
+                        <h3 class="text-4xl font-bold mt-4 mb-6">YouTube Retention API</h3>
+                        <p class="text-white/60 text-lg leading-relaxed mb-8">
+                            Creators often look at views, but rarely at the <strong>correlation between audio frequency and retention drop-offs</strong>. 
+                        </p>
+                        <p class="text-white/40 leading-relaxed">
+                            I am building a tool that uses the YouTube Data API and Python’s Librosa library to see if specific background music frequencies correlate with viewer exit points.
+                        </p>
                     </div>
-                    <a href="#" class="text-appleBlue font-semibold flex items-center">View Data Model <i class="fas fa-chevron-right text-[10px] ml-2"></i></a>
+                    <div class="border-l border-white/10 pl-10 space-y-6">
+                        <p class="text-sm"><strong class="text-white">Difficulty:</strong> API Quotas. Google is stingy with data points. I’m currently building a local caching layer to prevent redundant requests.</p>
+                    </div>
                 </div>
 
-                <div class="bento-card p-10 flex flex-col">
-                    <div class="mb-auto">
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
-                            <i class="fas fa-robot text-appleBlue text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 leading-tight">AWS WhatsApp Chatbot</h3>
-                        <p class="text-appleGray leading-relaxed mb-6">Serverless 24/7 intake pipeline using AWS Lambda. Scalable architecture with zero maintenance overhead.</p>
+                <div class="grid lg:grid-cols-2 gap-20">
+                    <div>
+                        <span class="text-appleBlue font-bold text-xs uppercase tracking-widest">In Development</span>
+                        <h3 class="text-4xl font-bold mt-4 mb-6">Streaming Fraud Monitor</h3>
+                        <p class="text-white/60 text-lg leading-relaxed mb-8">
+                            Detecting fraudulent legal claims requires analyzing data as it arrives, not 24 hours later. 
+                        </p>
+                        <p class="text-white/40 leading-relaxed">
+                            Execution: Using <strong>Apache Spark</strong> for stream processing and <strong>Snowflake</strong> as the data warehouse.
+                        </p>
                     </div>
-                    <a href="#" class="text-appleBlue font-semibold flex items-center">Architecture <i class="fas fa-chevron-right text-[10px] ml-2"></i></a>
-                </div>
-
-                <div class="bento-card p-10 flex flex-col">
-                    <div class="mb-auto">
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
-                            <i class="fas fa-map-marked-alt text-appleBlue text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 leading-tight">Airbnb Market Analysis</h3>
-                        <p class="text-appleGray leading-relaxed mb-6">Investment ROI mapping identifying high-yield rental zones with 15% higher potential than regional averages.</p>
+                    <div class="border-l border-white/10 pl-10 space-y-6">
+                        <p class="text-sm"><strong class="text-white">Difficulty:</strong> Latency vs. Accuracy. Filtering out "false positives" in a live stream is computationally expensive. I am testing a "Two-Pass" system where Spark does a light filter and Snowflake handles the deep check.</p>
                     </div>
-                    <a href="#" class="text-appleBlue font-semibold flex items-center">Launch Dashboard <i class="fas fa-chevron-right text-[10px] ml-2"></i></a>
-                </div>
-
-                <div class="bento-card p-10 flex flex-col">
-                    <div class="mb-auto">
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
-                            <i class="fas fa-terminal text-appleBlue text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 leading-tight">Churn Prediction Engine</h3>
-                        <p class="text-appleGray leading-relaxed mb-6">Revenue retention modeling using PostgreSQL Window Functions to isolate high-risk customer segments.</p>
-                    </div>
-                    <a href="#" class="text-appleBlue font-semibold flex items-center">Review Logic <i class="fas fa-chevron-right text-[10px] ml-2"></i></a>
-                </div>
-
-                <div class="bento-card p-10 flex flex-col">
-                    <div class="mb-auto">
-                        <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
-                            <i class="fas fa-code-branch text-appleBlue text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 leading-tight">Sales Pipeline Automation</h3>
-                        <p class="text-appleGray leading-relaxed mb-6">Reduced monthly aggregation time by 95% via custom Pandas cleaning and merging scripts.</p>
-                    </div>
-                    <a href="#" class="text-appleBlue font-semibold flex items-center">Open Notebook <i class="fas fa-chevron-right text-[10px] ml-2"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-[#f5f5f7]">
+    <footer class="py-24 border-t border-gray-100 text-center">
         <div class="fluid-container">
-            <h2 class="text-3xl font-bold mb-12">In Development</h2>
-            <div class="grid lg:grid-cols-2 gap-8">
-                <div class="bg-white p-12 rounded-[2.5rem] border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
-                    <i class="fas fa-shield-halved text-5xl text-appleBlue"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Real-Time Fraud Monitor</h3>
-                        <p class="text-appleGray mb-4">Streaming architecture for sub-second anomaly detection in legal claims data using Spark & Snowflake.</p>
-                        <span class="text-[10px] font-bold tracking-widest uppercase text-appleBlue">Active Alpha</span>
-                    </div>
-                </div>
-                <div class="bg-white p-12 rounded-[2.5rem] border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
-                    <i class="fab fa-youtube text-5xl text-[#FF0000]"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">YouTube Analytics API</h3>
-                        <p class="text-appleGray mb-4">Automated performance tracker for content creators, correlating metadata with retention spikes using Google Cloud APIs.</p>
-                        <span class="text-[10px] font-bold tracking-widest uppercase text-appleGray">Planning Phase</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-24 px-6 border-t border-gray-100">
-        <div class="fluid-container text-center">
-            <h3 class="text-4xl font-bold tracking-tight mb-12">Let's connect.</h3>
-            <div class="flex justify-center space-x-12 mb-16">
-                <a href="#" class="text-appleGray hover:text-appleBlack text-2xl transition-all"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="text-appleGray hover:text-appleBlack text-2xl transition-all"><i class="fab fa-github"></i></a>
-                <a href="mailto:sbowman836@gmail.com" class="text-appleGray hover:text-appleBlack text-2xl transition-all"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p class="text-[11px] font-semibold text-appleGray tracking-[0.3em] uppercase">&copy; 2026 Seth Bowman | Cape Town, ZA</p>
+            <p class="text-appleGray mb-4 italic">Built with a focus on architecture and narrative.</p>
+            <p class="text-[10px] font-bold tracking-[0.5em] text-gray-400 uppercase">&copy; 2026 Seth Bowman</p>
         </div>
     </footer>
 
