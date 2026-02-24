@@ -4,85 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seth Bowman | Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #0f172a; /* Navy Blue */
-            --accent: #3b82f6;  /* Bright Blue */
-            --bg: #f8fafc;      /* Light Gray Background */
-            --text: #334155;    /* Dark Gray Text */
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --text: #334155;
+            --card-bg: #ffffff;
         }
         body { font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; }
         
-        /* Navigation Bar */
-        nav { background: white; padding: 1rem 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
-        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text); font-weight: 500; }
+        /* Nav & Header */
+        nav { background: white; padding: 1rem 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); }
+        .nav-links a { margin-left: 25px; text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--accent); }
 
-        /* Hero Section (Top of page) */
-        header { text-align: center; padding: 5rem 1rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; }
-        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.25rem; color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem auto; }
-        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background: #2563eb; }
+        header { text-align: center; padding: 6rem 1rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; }
+        header h1 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: -1px; }
+        header p { font-size: 1.4rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2rem auto; }
+        .btn { background: var(--accent); color: white; padding: 12px 28px; text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.3s; display: inline-block; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); }
+        .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.2); margin-left: 10px; }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
 
-        /* Content Sections */
-        section { padding: 4rem 10%; max-width: 1200px; margin: 0 auto; }
-        h2 { border-left: 5px solid var(--accent); padding-left: 15px; color: var(--primary); margin-bottom: 2rem; }
-
-        /* Projects Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border-top: 4px solid var(--accent); }
-        .tag { display: inline-block; background: #e2e8f0; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; margin-top: 10px; margin-right: 5px; font-weight: 600; }
+        /* Projects Section */
+        section { padding: 5rem 10%; max-width: 1400px; margin: 0 auto; }
+        .section-title { font-size: 2rem; color: var(--primary); margin-bottom: 3rem; border-left: 5px solid var(--accent); padding-left: 20px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+        
+        .card { 
+            background: var(--card-bg); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        
+        .card-header { padding: 2rem; padding-bottom: 1rem; }
+        .card-icon { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; }
+        .card h3 { margin: 0 0 0.5rem 0; font-size: 1.5rem; color: var(--primary); }
+        .card p { color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+        .tag { background: #eff6ff; color: var(--accent); padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        
+        .card-footer { 
+            margin-top: auto; 
+            padding: 1.5rem 2rem; 
+            background: #f8fafc; 
+            border-top: 1px solid #e2e8f0; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-link { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.9rem; }
+        .card-link:hover { color: var(--accent); }
 
         /* Footer */
-        footer { background: var(--primary); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
-        footer a { color: var(--accent); }
+        footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 3rem; margin-top: 4rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">Seth Bowman</div>
+        <div class="logo">SB.</div>
         <div class="nav-links">
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#projects">Portfolio</a>
+            <a href="mailto:sbowman836@gmail.com">Contact</a>
         </div>
     </nav>
 
     <header>
-        <h1>Data Analyst</h1>
-        <p>Turning complex datasets into actionable business intelligence. Specializing in SQL, Python, and Data Integrity.</p>
-        <a href="#projects" class="btn">View My Case Studies</a>
+        <h1>Seth Bowman</h1>
+        <p>Data Analyst transforming raw datasets into strategic business decisions. Specializing in SQL, Python, and Pipeline Optimization.</p>
+        <div>
+            <a href="#projects" class="btn">View Case Studies</a>
+            <a href="Resume.pdf" target="_blank" class="btn btn-outline">Download Resume <i class="fas fa-download"></i></a>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a <strong>Computer Science Graduate</strong> and <strong>Data Analyst</strong> based in Cape Town. I specialize in bridging the gap between technical data engineering and business strategy.</p>
-        <p>Currently, I am an <strong>Intake Specialist at Nexum Group</strong>, where I manage high-volume data verification pipelines. Previously, I managed educational datasets for <strong>StudentCrowd UK</strong> and automated e-commerce reporting for <strong>BOA Beauty Group</strong>.</p>
-    </section>
-
     <section id="projects">
-        <h2>Technical Case Studies</h2>
+        <h2 class="section-title">Selected Projects</h2>
         <div class="grid">
             
             <div class="card">
-                <h3>🛒 Customer Retention Analysis</h3>
-                <p>Identified "High Value" customers at risk of churning using complex SQL joins and window functions. Proposed targeted re-engagement strategy.</p>
-                <span class="tag">SQL</span>
-                <span class="tag">Data Cleaning</span>
-                <span class="tag">CTE</span>
-                <br><br>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/2_analysis.sql" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">View SQL Script &rarr;</a>
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Customer Churn Analysis</h3>
+                    <p>Designed a relational database schema to identify "High Value" customers at risk of churning. Utilized SQL Common Table Expressions (CTEs) and window functions to segment users by recency and monetary value, proposing a targeted re-engagement strategy.</p>
+                    <div class="tech-stack">
+                        <span class="tag">SQL (Advanced)</span>
+                        <span class="tag">Data Modeling</span>
+                        <span class="tag">Relational DB</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span><i class="fas fa-code"></i> SQL Script</span>
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/2_analysis.sql" target="_blank" class="card-link">View Code &rarr;</a>
+                </div>
             </div>
 
             <div class="card">
-                <h3>📈 Sales Data Pipeline</h3>
-                <p>Built a Python script using Pandas to automate the cleaning of monthly sales reports, reducing manual data entry time by 40%.</p>
-                <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">Automation</span>
-                <br><br>
-                <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/DataCleaning_Visualization.ipynb" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">View Python Code &rarr;</a>
+                <div class="card-header">
+                    <div class="card-icon"><i class="fab fa-python"></i></div>
+                    <h3>Automated Sales Pipeline</h3>
+                    <p>Developed a Python script using Pandas to simulate the cleaning and processing of monthly sales reports. The script automates null value handling, date parsing, and aggregation, reducing simulated manual data entry time by 40%.</p>
+                    <div class="tech-stack">
+                        <span class="tag">Python 3</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span><i class="fas fa-laptop-code"></i> Python Notebook</span>
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/DataCleaning_Visualization.ipynb" target="_blank" class="card-link">View Analysis &rarr;</a>
+                </div>
             </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Intake-to-Recovery Optimization</h3>
+                    <p><strong>Context:</strong> At Nexum Group, invoice discrepancies were delaying legal recovery proceedings.<br>
+                    <strong>Solution:</strong> Engineered a data validation workflow to audit high-volume client databases. Streamlined the "Intake to Recovery" pipeline, ensuring 100% data integrity for legal compliance.</p>
+                    <div class="tech-stack">
+                        <span class="tag">Data Validation</span>
+                        <span class="tag">Process Design</span>
+                        <span class="tag">Excel (Advanced)</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span><i class="fas fa-briefcase"></i> Professional Case Study</span>
+                    <span style="color:#94a3b8; font-size:0.8rem;">(Confidential Data)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>E-commerce Performance Dashboard</h3>
+                    <p><strong>Context:</strong> BOA Beauty Group required real-time visibility into sales trends.<br>
+                    <strong>Solution:</strong> Integrated Shopify data exports with automated spreadsheets to track engagement metrics. The dashboard cut manual reporting hours significantly and identified key product performance trends.</p>
+                    <div class="tech-stack">
+                        <span class="tag">Shopify Analytics</span>
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span><i class="fas fa-briefcase"></i> Professional Case Study</span>
+                    <span style="color:#94a3b8; font-size:0.8rem;">(Confidential Data)</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Seth Bowman. <a href="mailto:sbowman836@gmail.com" style="color:#94a3b8;">sbowman836@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
