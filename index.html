@@ -3,90 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seth Bowman | Data Analyst Portfolio</title>
+    <title>Seth Bowman | Data Analyst</title>
     <style>
+        /* This section makes the site look professional */
         :root {
-            --primary: #2563eb;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
+            --primary: #0f172a; /* Navy Blue */
+            --accent: #3b82f6;  /* Bright Blue */
+            --bg: #f8fafc;      /* Light Gray Background */
+            --text: #334155;    /* Dark Gray Text */
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: #334155;
-            background: var(--light);
-        }
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 1rem 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo { font-weight: 700; font-size: 1.2rem; color: var(--dark); }
-        .nav-links a { text-decoration: none; color: var(--gray); margin-left: 20px; font-weight: 500; }
-        .nav-links a:hover { color: var(--primary); }
-
-        /* Hero Section */
-        header {
-            background: var(--dark);
-            color: white;
-            padding: 4rem 5%;
-            text-align: center;
-        }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { color: #94a3b8; font-size: 1.2rem; max-width: 600px; margin: 1rem auto; }
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-            font-weight: 600;
-        }
-
-        /* Sections */
-        section { padding: 4rem 5%; max-width: 1000px; margin: 0 auto; }
-        h2 { border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; margin-bottom: 2rem; color: var(--dark); }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; }
         
-        /* Grid Layouts */
+        /* Navigation Bar */
+        nav { background: white; padding: 1rem 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text); font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section (Top of page) */
+        header { text-align: center; padding: 5rem 1rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.25rem; color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem auto; }
+        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn:hover { background: #2563eb; }
+
+        /* Content Sections */
+        section { padding: 4rem 10%; max-width: 1200px; margin: 0 auto; }
+        h2 { border-left: 5px solid var(--accent); padding-left: 15px; color: var(--primary); margin-bottom: 2rem; }
+
+        /* Projects Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary);
-        }
-        .card h3 { margin-top: 0; }
-        .skill-tag {
-            background: #e2e8f0;
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            display: inline-block;
-            margin: 5px 5px 0 0;
-            color: var(--dark);
-        }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border-top: 4px solid var(--accent); }
+        .tag { display: inline-block; background: #e2e8f0; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; margin-top: 10px; margin-right: 5px; font-weight: 600; }
 
         /* Footer */
-        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 2rem; margin-top: 4rem; }
-        footer a { color: white; }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            .nav-links { display: none; } /* Simple mobile hide for now */
-        }
+        footer { background: var(--primary); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer a { color: var(--accent); }
     </style>
 </head>
 <body>
@@ -96,79 +48,79 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="mailto:sbowman836@gmail.com">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header>
-        <h1>Data Analyst & CS Graduate</h1>
-        <p>Specializing in Data Integrity, Pipeline Administration, and E-commerce Analytics.</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <h1>Data Analyst</h1>
+        <p>Turning complex datasets into actionable business intelligence. Specializing in SQL, Python, and Data Integrity.</p>
+        <a href="#projects" class="btn">View My Case Studies</a>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a <strong>Computer Science Graduate</strong> bridging the gap between technical software engineering and actionable business intelligence. Currently, I serve as an <strong>Intake Specialist at Nexum Group</strong>, optimizing "Intake to Recovery" pipelines through advanced data verification.</p>
-        <p>My background includes managing large-scale educational datasets for <strong>StudentCrowd UK</strong> and driving sales performance via <strong>Shopify Analytics for BOA Beauty Group</strong>.</p>
+        <p>I am a <strong>Computer Science Graduate</strong> and <strong>Data Analyst</strong> based in Cape Town. I specialize in bridging the gap between technical data engineering and business strategy.</p>
+        <p>Currently, I am an <strong>Intake Specialist at Nexum Group</strong>, where I manage high-volume data verification pipelines. Previously, I managed educational datasets for <strong>StudentCrowd UK</strong> and automated e-commerce reporting for <strong>BOA Beauty Group</strong>.</p>
     </section>
 
     <section id="projects">
-        <h2>Key Projects</h2>
+        <h2>Technical Case Studies</h2>
         <div class="grid">
+            
             <div class="card">
-                <h3>Intake-to-Recovery Pipeline</h3>
-                <p>Designed data verification workflows to identify invoice discrepancies and ensure 100% accuracy for legal recovery proceedings.</p>
-                <div style="margin-top:15px;">
-                    <span class="skill-tag">Data Cleaning</span>
-                    <span class="skill-tag">Excel/CSV</span>
-                    <span class="skill-tag">Pipeline Opt.</span>
-                </div>
+                <h3>🛒 Customer Retention Analysis</h3>
+                <p>Identified "High Value" customers at risk of churning using complex SQL joins and window functions. Proposed targeted re-engagement strategy.</p>
+                <span class="tag">SQL</span>
+                <span class="tag">Data Cleaning</span>
+                <span class="tag">CTE</span>
+                <br><br>
+                <a href="#" style="color:var(--accent); text-decoration:none; font-weight:bold;">View SQL Script &rarr;</a>
             </div>
 
             <div class="card">
-                <h3>UK Educational Dataset Admin</h3>
-                <p>Managed and normalized large-scale datasets for StudentCrowd, integrating third-party sources and monitoring compliance.</p>
-                <div style="margin-top:15px;">
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Data Normalization</span>
-                    <span class="skill-tag">Jira</span>
-                </div>
+                <h3>📈 Sales Data Pipeline</h3>
+                <p>Built a Python script using Pandas to automate the cleaning of monthly sales reports, reducing manual data entry time by 40%.</p>
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Automation</span>
+                <br><br>
+                <a href="#" style="color:var(--accent); text-decoration:none; font-weight:bold;">View Python Code &rarr;</a>
             </div>
 
             <div class="card">
-                <h3>E-commerce Sales Automation</h3>
-                <p>Automated reporting for BOA Beauty Group using Shopify data, reducing manual work hours and tracking engagement metrics.</p>
-                <div style="margin-top:15px;">
-                    <span class="skill-tag">Shopify API</span>
-                    <span class="skill-tag">Automated Reporting</span>
-                    <span class="skill-tag">Google Sheets</span>
-                </div>
+                <h3>⚖️ Intake-to-Recovery Integrity</h3>
+                <p>Designed a data validation workflow at Nexum Group to ensure 100% accuracy in legal invoice reporting.</p>
+                <span class="tag">Excel (Advanced)</span>
+                <span class="tag">Data Validation</span>
+                <span class="tag">Process Design</span>
             </div>
+
         </div>
     </section>
 
-    <section id="skills">
+    <section>
         <h2>Technical Arsenal</h2>
-        <div class="grid">
-            <div class="card" style="border-top-color: #10b981;">
-                <h3>Core Tech</h3>
-                <p>Python (Pandas/NumPy), SQL, JavaScript, HTML/CSS, Git/GitHub.</p>
-            </div>
-            <div class="card" style="border-top-color: #8b5cf6;">
-                <h3>Data & BI</h3>
-                <p>Metabase, Tableau, Advanced Excel, Shopify Analytics, Google Sheets.</p>
-            </div>
-            <div class="card" style="border-top-color: #f59e0b;">
-                <h3>Cloud & Tools</h3>
-                <p>IBM Cloud, AWS Fundamentals, Jira, Slack, Monday.com.</p>
-            </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <span class="tag" style="background:var(--primary); color:white;">SQL (PostgreSQL/MySQL)</span>
+            <span class="tag" style="background:var(--primary); color:white;">Python (Pandas/NumPy)</span>
+            <span class="tag" style="background:var(--primary); color:white;">Tableau / Metabase</span>
+            <span class="tag" style="background:var(--primary); color:white;">Advanced Excel</span>
+            <span class="tag" style="background:var(--primary); color:white;">IBM Cloud</span>
+            <span class="tag" style="background:var(--primary); color:white;">Git & GitHub</span>
         </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2>Let's Connect</h2>
+        <p>I am currently open to Data Analyst and Junior Data Engineering roles.</p>
+        <a href="mailto:sbowman836@gmail.com" class="btn">Email Me</a>
+        <br><br>
+        <p><small>Based in Cape Town, South Africa | +27 60 198 7917</small></p>
     </section>
 
     <footer>
-        <p>Connect with me: <a href="mailto:sbowman836@gmail.com">sbowman836@gmail.com</a></p>
-        <p>&copy; 2026 Seth Bowman. Hosted on GitHub Pages.</p>
+        <p>&copy; 2026 Seth Bowman. Built with HTML & CSS.</p>
     </footer>
 
 </body>
