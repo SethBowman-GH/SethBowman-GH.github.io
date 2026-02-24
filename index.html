@@ -12,9 +12,11 @@
             theme: {
                 extend: {
                     colors: {
-                        appleBlue: '#0071e3',
-                        appleGray: '#1d1d1f',
-                        appleSilver: '#f5f5f7',
+                        appleBlue: '#0066cc',
+                        appleBlack: '#1d1d1f',
+                        appleGray: '#86868b',
+                        appleBg: '#ffffff',
+                        appleCard: '#f5f5f7',
                     }
                 }
             }
@@ -24,153 +26,181 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
-            background-color: #000000; 
-            color: #f5f5f7; 
+            background-color: #ffffff; 
+            color: #1d1d1f; 
             -webkit-font-smoothing: antialiased;
         }
-        .apple-glass { 
-            background: rgba(22, 22, 23, 0.8); 
-            backdrop-filter: blur(20px) saturate(180%); 
-            border: 0.5px solid rgba(255, 255, 255, 0.1); 
-        }
         .bento-card {
-            background: #161617;
-            border-radius: 2.5rem;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #f5f5f7;
+            border-radius: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.02);
         }
         .bento-card:hover {
             transform: scale(1.01);
+            background: #fbfbfd;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .text-gradient {
+            background: linear-gradient(180deg, #1d1d1f 0%, #434344 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
-            <span class="text-lg font-semibold tracking-tight text-white/90">Seth Bowman</span>
-            <div class="flex space-x-8 text-[12px] font-normal text-white/60">
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-                <a href="mailto:sbowman836@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            <span class="text-lg font-semibold tracking-tight text-appleBlack">Seth Bowman</span>
+            <div class="flex space-x-8 text-[12px] font-normal text-appleGray">
+                <a href="#about" class="hover:text-appleBlue transition-colors">About</a>
+                <a href="#projects" class="hover:text-appleBlue transition-colors">Projects</a>
+                <a href="mailto:sbowman836@gmail.com" class="hover:text-appleBlue transition-colors font-medium text-appleBlue">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative pt-48 pb-32 px-6 overflow-hidden">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-appleBlue font-semibold text-lg md:text-xl mb-4 tracking-tight">Data Analyst & Systems Architect</h2>
-            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter text-white leading-[1.05] mb-10">
-                Data speaks. <br>
-                <span class="text-white/40">We just listen better.</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
-                BSc Computer Science graduate specializing in SQL architectures, Python automation, and scalable cloud solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#projects" class="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-appleSilver transition-all">View Case Studies</a>
-                <a href="https://www.linkedin.com" target="_blank" class="text-appleBlue font-medium hover:underline flex items-center">Learn more <i class="fas fa-chevron-right text-[10px] ml-2"></i></a>
+    <header class="relative pt-40 pb-20 px-6">
+        <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="text-appleGray font-semibold text-xl tracking-tight">Data Analyst & Systems Architect</h2>
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-appleBlack leading-[1.1]">
+                    Hello, I'm <br><span class="text-gradient">Seth Bowman.</span>
+                </h1>
+                <p class="text-xl text-appleGray leading-relaxed max-w-lg">
+                    A BSc Computer Science graduate building the bridge between complex data architectures and actionable business intelligence.
+                </p>
+                <div class="flex gap-6 pt-4">
+                    <a href="#projects" class="px-6 py-3 bg-appleBlack text-white rounded-full font-medium hover:bg-black transition-all">View My Work</a>
+                    <a href="https://www.linkedin.com" target="_blank" class="px-6 py-3 border border-gray-200 rounded-full font-medium hover:bg-gray-50 transition-all">LinkedIn</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-80 h-96">
+                    <img src="Assets/headshot.png" alt="Seth Bowman" class="w-full h-full object-cover rounded-[2.5rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-appleBlue/5 rounded-full blur-3xl"></div>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="max-w-6xl mx-auto px-6 py-24">
-        <div class="bento-card p-12 md:p-20 bg-[#161617]">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h3 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Engineered for precision.</h3>
-                    <p class="text-lg text-white/50 leading-relaxed">
-                        Currently at <span class="text-white">Nexum Group</span>, I manage complex data verification pipelines. My work focuses on the intersection of software engineering and cloud intelligence.
-                    </p>
-                    <div class="pt-4">
-                        <a href="Assets/Resume.pdf" class="px-6 py-2 border border-white/20 rounded-full text-sm font-medium hover:bg-white hover:text-black transition-all">Download CV</a>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-6 rounded-3xl bg-white/[0.03] text-center border border-white/5">
-                        <span class="block text-3xl font-bold text-white mb-1">SQL</span>
-                        <span class="text-xs uppercase tracking-widest text-white/40">Architecture</span>
-                    </div>
-                    <div class="p-6 rounded-3xl bg-white/[0.03] text-center border border-white/5">
-                        <span class="block text-3xl font-bold text-white mb-1">AWS</span>
-                        <span class="text-xs uppercase tracking-widest text-white/40">Cloud</span>
-                    </div>
-                    <div class="p-6 rounded-3xl bg-white/[0.03] text-center border border-white/5">
-                        <span class="block text-3xl font-bold text-white mb-1">PY</span>
-                        <span class="text-xs uppercase tracking-widest text-white/40">Automation</span>
-                    </div>
-                    <div class="p-6 rounded-3xl bg-white/[0.03] text-center border border-white/5">
-                        <span class="block text-3xl font-bold text-white mb-1">BI</span>
-                        <span class="text-xs uppercase tracking-widest text-white/40">Tableau</span>
-                    </div>
+    <section id="about" class="max-w-5xl mx-auto px-6 py-24 border-t border-gray-100">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-2 space-y-6">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-appleGray">Biography</h3>
+                <h4 class="text-4xl font-bold tracking-tight text-appleBlack">Technical Narrative</h4>
+                <p class="text-lg text-appleGray leading-relaxed">
+                    With a strong foundation in software engineering and cloud computing, I currently manage data verification and intake pipelines at <strong class="text-appleBlack">Nexum Group</strong>. My approach combines the rigor of computer science with the agility required in modern data environments.
+                </p>
+                <p class="text-lg text-appleGray leading-relaxed">
+                    My track record includes dataset administration for <strong class="text-appleBlack">StudentCrowd UK</strong> and engineering automation solutions for <strong class="text-appleBlack">BOA Beauty Group</strong>, focusing on making data accessible and error-free.
+                </p>
+            </div>
+            <div class="space-y-6">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-appleGray">Core Stack</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 font-medium"><i class="fas fa-database text-appleBlue"></i> SQL Architectures</li>
+                    <li class="flex items-center gap-3 font-medium"><i class="fab fa-python text-appleBlue"></i> Python Automation</li>
+                    <li class="flex items-center gap-3 font-medium"><i class="fas fa-cloud text-appleBlue"></i> AWS Cloud Solutions</li>
+                    <li class="flex items-center gap-3 font-medium"><i class="fas fa-chart-area text-appleBlue"></i> Tableau Intelligence</li>
+                </ul>
+                <div class="pt-6">
+                    <a href="Assets/Resume.pdf" class="text-appleBlue font-semibold hover:underline">Download Resume <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-bold tracking-tight text-white mb-16 text-center">Engineering Case Studies</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            
-            <div class="md:col-span-8 bento-card p-10 flex flex-col justify-between min-h-[500px] group">
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold tracking-tight mb-4">Case Studies</h2>
+            <p class="text-appleGray">Selected works in architecture and analytics.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bento-card p-10 flex flex-col justify-between group">
                 <div>
-                    <span class="text-appleBlue font-semibold text-sm uppercase tracking-widest">Automation</span>
-                    <h3 class="text-4xl font-bold text-white mt-4 mb-6 tracking-tight">AWS WhatsApp Chatbot</h3>
-                    <p class="text-white/50 text-lg max-w-md">Serverless intake pipeline utilizing AWS Lambda to achieve zero-idle costs and ~200ms latency.</p>
+                    <i class="fas fa-robot text-3xl mb-6 text-appleBlue"></i>
+                    <h3 class="text-2xl font-bold mb-4">AWS WhatsApp Chatbot</h3>
+                    <p class="text-appleGray mb-6">Automated 24/7 intake using AWS Lambda. Achieved ~200ms latency with $0 maintenance cost.</p>
+                    <div class="space-y-2 mb-8">
+                        <p class="text-xs font-semibold text-appleBlack">SYSTEMS ARCHITECTURE</p>
+                        <p class="text-xs text-appleGray">AWS Secrets Manager • Lambda • API Gateway</p>
+                    </div>
                 </div>
-                <div class="flex justify-between items-end">
-                    <a href="#" class="text-appleBlue font-medium hover:underline flex items-center">View Architecture <i class="fas fa-chevron-right text-[10px] ml-2"></i></a>
-                    <i class="fas fa-cloud text-8xl text-white/[0.03] absolute -bottom-4 -right-4 group-hover:text-appleBlue transition-colors"></i>
+                <a href="#" class="text-appleBlue font-medium hover:underline">View Architecture →</a>
+            </div>
+
+            <div class="bento-card p-10 flex flex-col justify-between group">
+                <div>
+                    <i class="fas fa-chart-pie text-3xl mb-6 text-appleBlue"></i>
+                    <h3 class="text-2xl font-bold mb-4">Airbnb Market Analysis</h3>
+                    <p class="text-appleGray mb-6">Investment ROI mapping for the Atlantic Seaboard. Identified zones with 15% higher ROI potential.</p>
+                    <div class="space-y-2 mb-8">
+                        <p class="text-xs font-semibold text-appleBlack">GEOSPATIAL INTELLIGENCE</p>
+                        <p class="text-xs text-appleGray">Tableau • Python • Spatial Analysis</p>
+                    </div>
                 </div>
+                <a href="#" class="text-appleBlue font-medium hover:underline">Launch Dashboard →</a>
             </div>
 
-            <div class="md:col-span-4 bento-card p-10 bg-[#f5f5f7] group">
-                <span class="text-black/40 font-semibold text-sm uppercase tracking-widest">Analysis</span>
-                <h3 class="text-3xl font-bold text-black mt-4 mb-6 tracking-tight">Airbnb ROI</h3>
-                <p class="text-black/60 text-sm mb-8">Investment mapping for the Atlantic Seaboard yielding 15% higher returns.</p>
-                <a href="#" class="text-appleBlue font-medium hover:underline">Launch Dashboard</a>
+            <div class="bento-card p-10 flex flex-col justify-between group">
+                <div>
+                    <i class="fas fa-terminal text-3xl mb-6 text-appleBlue"></i>
+                    <h3 class="text-2xl font-bold mb-4">Churn Prediction Engine</h3>
+                    <p class="text-appleGray mb-6">Optimized PostgreSQL logic to segment high-risk revenue groups using complex Window Functions.</p>
+                    <div class="space-y-2 mb-8">
+                        <p class="text-xs font-semibold text-appleBlack">ADVANCED SQL</p>
+                        <p class="text-xs text-appleGray">PostgreSQL • CTEs • Performance Tuning</p>
+                    </div>
+                </div>
+                <a href="#" class="text-appleBlue font-medium hover:underline">Review Query Logic →</a>
             </div>
 
-            <div class="md:col-span-4 bento-card p-10 flex flex-col justify-between group">
-                <h3 class="text-2xl font-bold text-white tracking-tight">Churn Prediction</h3>
-                <p class="text-white/50 text-sm">Revenue retention modeling using advanced PostgreSQL Window Functions.</p>
-                <a href="#" class="mt-6 text-appleBlue font-medium">Review Logic</a>
-            </div>
-
-            <div class="md:col-span-4 bento-card p-10 flex flex-col justify-between group">
-                <h3 class="text-2xl font-bold text-white tracking-tight">Sales Pipeline</h3>
-                <p class="text-white/50 text-sm">Reduced aggregation time from 4 hours to 1 minute using Python/Pandas.</p>
-                <a href="#" class="mt-6 text-appleBlue font-medium">View Notebook</a>
-            </div>
-
-            <div class="md:col-span-4 bento-card p-10 flex flex-col justify-between group bg-gradient-to-br from-appleBlue to-cyan-500 text-white">
-                <h3 class="text-2xl font-bold tracking-tight">Retail Dashboard</h3>
-                <p class="text-white/90 text-sm">Star Schema architecture for multi-currency reporting.</p>
-                <a href="#" class="mt-6 font-bold underline">View Model</a>
+            <div class="bento-card p-10 flex flex-col justify-between group">
+                <div>
+                    <i class="fas fa-code-branch text-3xl mb-6 text-appleBlue"></i>
+                    <h3 class="text-2xl font-bold mb-4">Sales Pipeline Automation</h3>
+                    <p class="text-appleGray mb-6">Reduced monthly aggregation time by 95% (4 hours to < 1 min) via Python/Pandas scripts.</p>
+                    <div class="space-y-2 mb-8">
+                        <p class="text-xs font-semibold text-appleBlack">ETL AUTOMATION</p>
+                        <p class="text-xs text-appleGray">Pandas • Data Cleaning • Automation</p>
+                    </div>
+                </div>
+                <a href="#" class="text-appleBlue font-medium hover:underline">View Notebook →</a>
             </div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto px-6 py-32 text-center">
-        <div class="inline-block p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-8">
-            <span class="text-appleBlue text-xs font-bold uppercase tracking-[0.2em]">In Development</span>
+    <section class="max-w-5xl mx-auto px-6 py-32 border-t border-gray-100">
+        <div class="bento-card p-12 bg-white border-2 border-appleBlue/10 relative overflow-hidden">
+            <div class="relative z-10 text-center space-y-6">
+                <span class="text-appleBlue font-bold text-xs uppercase tracking-widest">In Development</span>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-appleBlack">Real-Time Fraud Monitor</h2>
+                <p class="text-appleGray max-w-2xl mx-auto text-lg leading-relaxed">
+                    Building a sub-second anomaly detection system for legal claims data. Leveraging experience from <strong class="text-appleBlack">Nexum Group</strong> to implement Spark Streaming and Snowflake.
+                </p>
+                <div class="pt-4 flex justify-center gap-4">
+                    <span class="px-3 py-1 bg-gray-100 rounded-full text-[10px] font-bold text-appleGray">KAFKA</span>
+                    <span class="px-3 py-1 bg-gray-100 rounded-full text-[10px] font-bold text-appleGray">SPARK</span>
+                    <span class="px-3 py-1 bg-gray-100 rounded-full text-[10px] font-bold text-appleGray">SNOWFLAKE</span>
+                </div>
+            </div>
         </div>
-        <h2 class="text-5xl md:text-6xl font-bold text-white tracking-tighter mb-8">Real-Time Fraud Monitor</h2>
-        <p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">Implementing Spark Streaming and Snowflake to detect anomalies in legal claims data with sub-second precision.</p>
-        <a href="#" class="px-8 py-4 bg-appleBlue text-white rounded-full font-semibold">Follow Development</a>
     </section>
 
-    <footer class="py-20 bg-[#161617] text-center px-6">
-        <p class="text-white/40 text-sm font-medium mb-8">Seth Bowman &bull; Cape Town, ZA</p>
-        <div class="flex justify-center space-x-12 opacity-50 hover:opacity-100 transition-opacity">
-            <a href="#" class="text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="text-white text-xl"><i class="fab fa-github"></i></a>
-            <a href="#" class="text-white text-xl"><i class="fas fa-envelope"></i></a>
-        </div>
-        <div class="mt-16 text-[10px] text-white/20 uppercase tracking-[0.3em]">
-            &copy; 2026 Designed with Precision.
+    <footer class="py-24 bg-[#fbfbfd] border-t border-gray-200 px-6">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+            <h3 class="text-4xl font-bold tracking-tight">Let's build something together.</h3>
+            <div class="flex justify-center space-x-12">
+                <a href="#" class="text-appleGray hover:text-appleBlue text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-appleGray hover:text-appleBlue text-2xl"><i class="fab fa-github"></i></a>
+                <a href="mailto:sbowman836@gmail.com" class="text-appleGray hover:text-appleBlue text-2xl"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="pt-12 text-xs font-medium text-appleGray uppercase tracking-[0.4em]">
+                &copy; 2026 Seth Bowman &bull; Cape Town, ZA
+            </div>
         </div>
     </footer>
 
