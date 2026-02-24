@@ -6,29 +6,73 @@
     <title>Seth Bowman | Data Analyst</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #0f172a; --accent: #2563eb; --bg: #f8fafc; --text: #334155; --card-bg: #ffffff; }
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --text: #334155;
+            --card-bg: #ffffff;
+        }
         body { font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; }
+        
+        /* Nav & Header */
         nav { background: white; padding: 1rem 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
         .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); }
         .nav-links a { margin-left: 25px; text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--accent); }
+
         header { text-align: center; padding: 6rem 1rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; }
         header h1 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: -1px; }
         header p { font-size: 1.4rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2rem auto; }
         .btn { background: var(--accent); color: white; padding: 12px 28px; text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.3s; display: inline-block; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); }
         .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.2); margin-left: 10px; }
-        section { padding: 5rem 10%; max-width: 1400px; margin: 0 auto; }
+
+        /* Sections */
+        section { padding: 5rem 10%; max-width: 1300px; margin: 0 auto; }
         .section-title { font-size: 2rem; color: var(--primary); margin-bottom: 3rem; border-left: 5px solid var(--accent); padding-left: 20px; }
+
+        /* Projects Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
-        .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: 0.3s; display: flex; flex-direction: column; border: 1px solid #e2e8f0; }
+        
+        .card { 
+            background: var(--card-bg); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
         .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .card-header { padding: 2rem; }
-        .card-icon { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; }
-        .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
-        .tag { background: #eff6ff; color: var(--accent); padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
-        .card-footer { margin-top: auto; padding: 1.5rem 2rem; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
-        .card-link { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.9rem; }
+        
+        .card-header { padding: 2rem; padding-bottom: 1.5rem; }
+        .card-icon { font-size: 2.2rem; color: var(--accent); margin-bottom: 1.2rem; }
+        .card h3 { margin: 0 0 0.7rem 0; font-size: 1.5rem; color: var(--primary); }
+        .card p { color: #64748b; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem; }
+        
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; }
+        .tag { background: #eff6ff; color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .card-footer { 
+            margin-top: auto; 
+            padding: 1.5rem 2rem; 
+            background: #f8fafc; 
+            border-top: 1px solid #e2e8f0; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-link { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.9rem; transition: 0.2s; }
+        .card-link:hover { color: var(--accent); }
+
         footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 3rem; margin-top: 4rem; }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            section { padding: 3rem 5%; }
+        }
     </style>
 </head>
 <body>
@@ -43,30 +87,30 @@
 
     <header>
         <h1>Seth Bowman</h1>
-        <p>Data Analyst transforming raw datasets into strategic business decisions. Specializing in SQL, Python, and BI Visualization.</p>
+        <p>Data Analyst transforming raw datasets into strategic business decisions. Specializing in SQL, Python, and Interactive BI Visualization.</p>
         <div>
-            <a href="#projects" class="btn">View Portfolio</a>
+            <a href="#projects" class="btn">View Case Studies</a>
             <a href="mailto:sbowman836@gmail.com" class="btn btn-outline">Email Me</a>
         </div>
     </header>
 
     <section id="projects">
-        <h2 class="section-title">Technical Case Studies</h2>
+        <h2 class="section-title">Technical Portfolio</h2>
         <div class="grid">
             
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon"><i class="fas fa-map-marked-alt"></i></div>
-                    <h3>Cape Town Airbnb Market Heatmap</h3>
-                    <p>Geospatial analysis of 15,000+ listings. Visualized price distribution across the Western Cape to identify high-ROI clusters and market saturation zones.</p>
+                    <h3>Cape Town Airbnb Heatmap</h3>
+                    <p>Geospatial analysis of 15,000+ listings. Visualized price distribution across the Western Cape to identify high-ROI clusters and market saturation zones. Normalized scale to manage extreme pricing outliers.</p>
                     <div class="tech-stack">
-                        <span class="tag">Tableau Public</span>
-                        <span class="tag">Geospatial Analysis</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Geospatial</span>
                         <span class="tag">Market Intelligence</span>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <span><i class="fas fa-external-link-alt"></i> Interactive Dashboard</span>
+                    <span><i class="fas fa-chart-line"></i> Interactive Dashboard</span>
                     <a href="https://public.tableau.com/shared/MF256ZT75?:display_count=n&:origin=viz_share_link" target="_blank" class="card-link">View Analysis &rarr;</a>
                 </div>
             </div>
@@ -74,34 +118,34 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon"><i class="fas fa-database"></i></div>
-                    <h3>Customer Churn Analysis (SQL)</h3>
-                    <p>Designed a relational schema to predict churn among "High Value" customers. Used Advanced SQL (CTEs, Window Functions) to segment user behavior.</p>
+                    <h3>Customer Churn Analysis</h3>
+                    <p>Designed a relational schema to identify High-Value customers at risk of churning. Utilized SQL CTEs and window functions to segment users by recency and monetary value.</p>
                     <div class="tech-stack">
-                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">SQL (Advanced)</span>
                         <span class="tag">Data Modeling</span>
-                        <span class="tag">Query Optimization</span>
+                        <span class="tag">Relational DB</span>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <span><i class="fas fa-code"></i> GitHub Repo</span>
-                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/2_analysis.sql" target="_blank" class="card-link">View SQL &rarr;</a>
+                    <span><i class="fas fa-code"></i> SQL Script</span>
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/2_analysis.sql" target="_blank" class="card-link">View Code &rarr;</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon"><i class="fab fa-python"></i></div>
-                    <h3>Automated ETL Sales Pipeline</h3>
-                    <p>Python script utilizing Pandas to automate the cleaning and aggregation of e-commerce data. Reduced manual reporting time by 40%.</p>
+                    <h3>Automated ETL Pipeline</h3>
+                    <p>Engineered a Python script using Pandas to automate cleaning of monthly sales reports. Streamlined null value handling and date parsing, reducing manual work by 40%.</p>
                     <div class="tech-stack">
                         <span class="tag">Python 3</span>
                         <span class="tag">Pandas</span>
-                        <span class="tag">Data Cleaning</span>
+                        <span class="tag">Automation</span>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <span><i class="fas fa-laptop-code"></i> Jupyter Notebook</span>
-                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/DataCleaning_Visualization.ipynb" target="_blank" class="card-link">View Code &rarr;</a>
+                    <span><i class="fas fa-laptop-code"></i> Python Notebook</span>
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/DataCleaning_Visualization.ipynb" target="_blank" class="card-link">View Repo &rarr;</a>
                 </div>
             </div>
 
