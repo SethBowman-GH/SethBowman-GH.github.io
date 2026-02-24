@@ -77,112 +77,75 @@
         </div>
     </header>
 
-    <section id="about" class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="glass-card rounded-[2.5rem] p-10 md:p-16">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div class="space-y-6">
-                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Biography</h2>
-                    <h3 class="text-3xl font-bold text-textMain">The Analytical Lens</h3>
-                    <p class="text-textSub leading-relaxed">
-                        Computer Science undergraduate focused on the intersection of software engineering and quantitative analysis. Currently at <strong>Nexum Group</strong>, where I maintain data integrity and optimize verification pipelines.
-                    </p>
-                    <p class="text-textSub leading-relaxed">
-                        My background involves leveraging Python and SQL to uncover hidden trends for <strong>StudentCrowd UK</strong> and driving operational efficiency through automated reporting.
-                    </p>
-                </div>
-                <div class="space-y-8">
-                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Analysis Toolkit</h2>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
-                            <i class="fab fa-python text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">Pandas/NumPy</span>
-                        </div>
-                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
-                            <i class="fas fa-database text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">PostgreSQL</span>
-                        </div>
-                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
-                            <i class="fas fa-chart-line text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">Stats Modeling</span>
-                        </div>
-                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
-                            <i class="fas fa-chart-pie text-techBlue text-2xl mb-3"></i>
-                            <span class="block text-[10px] font-bold uppercase tracking-widest text-textMain">BI Visualization</span>
-                        </div>
-                    </div>
-                    <a href="Assets/Resume.pdf" target="_blank" class="block w-full text-center py-4 bg-gray-900 hover:bg-black text-white font-black uppercase text-[10px] tracking-[0.3em] rounded-xl transition-all">View Academic CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
         <div class="flex items-center justify-between mb-12">
-            <div>
-                <h2 class="text-4xl font-extrabold tracking-tighter text-textMain">Data Case Studies</h2>
-                <p class="text-textSub mt-2 text-sm">Quantifying impact through rigorous analysis and visualization.</p>
-            </div>
+            <h2 class="text-4xl font-extrabold tracking-tighter text-textMain">Engineering Case Studies</h2>
             <div class="h-1 w-24 bg-techBlue rounded-full"></div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <i class="fas fa-brain text-9xl text-techBlue"></i>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-robot text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Serverless</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-textMain">AWS WhatsApp Chatbot</h3>
+                    <p class="text-textSub text-sm mb-6">Automated 24/7 customer intake pipeline using AWS Lambda.</p>
                 </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-map-location-dot text-xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Geospatial</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-textMain">Airbnb Market Analysis</h3>
+                    <p class="text-textSub text-sm mb-6">Investment ROI mapping for the Atlantic Seaboard.</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
                 <div class="relative z-10">
                     <div class="flex justify-between items-start mb-6">
                         <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
                             <i class="fas fa-user-minus text-xl"></i>
                         </div>
-                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Predictive Analytics</span>
+                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">SQL/ML</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-2 text-textMain">Churn Prediction Engine</h3>
-                    <p class="text-textSub text-sm mb-6">Identifying revenue leakage through behavior modeling.</p>
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-start space-x-3 text-sm text-textSub">
-                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
-                            <span>Mapped churn signals via activity velocity and contraction metrics.</span>
-                        </div>
-                        <div class="flex items-start space-x-3 text-sm text-textSub">
-                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
-                            <span>Segmented <span class="font-bold text-textMain">high-risk cohorts</span> for retention strategies.</span>
-                        </div>
-                    </div>
-                    <a href="#" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:underline">
-                        <span>View Analysis Logic</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <p class="text-textSub text-sm mb-6">Revenue retention modeling using PostgreSQL.</p>
                 </div>
             </div>
 
             <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <i class="fas fa-chart-simple text-9xl text-techBlue"></i>
-                </div>
                 <div class="relative z-10">
                     <div class="flex justify-between items-start mb-6">
                         <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-project-diagram text-xl"></i>
+                            <i class="fas fa-code-branch text-xl"></i>
                         </div>
-                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Data Modeling</span>
+                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">ETL</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-textMain">Global Retail Analytics</h3>
-                    <p class="text-textSub text-sm mb-6">Normalizing multi-currency reporting via Star Schema.</p>
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-start space-x-3 text-sm text-textSub">
-                            <i class="fas fa-check-circle text-techBlue mt-1"></i>
-                            <span>DAX currency normalization for EUR, GBP, and USD reporting.</span>
+                    <h3 class="text-2xl font-bold mb-2 text-textMain">Sales Pipeline Automation</h3>
+                    <p class="text-textSub text-sm mb-6">Python/Pandas aggregation for monthly financial reporting.</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
+                            <i class="fas fa-chart-simple text-xl"></i>
                         </div>
-                        <div class="flex items-start space-x-3 text-sm text-textSub">
-                            <i class="fas fa-chart-line text-techBlue mt-1"></i>
-                            <span>Enabled <span class="font-bold text-textMain">Profit vs. Volume</span> drill-down hierarchies.</span>
-                        </div>
+                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Power BI</span>
                     </div>
-                    <a href="#" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-techBlue hover:underline">
-                        <span>View Data Model</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <h3 class="text-2xl font-bold mb-2 text-textMain">Global Retail Executive Dashboard</h3>
+                    <p class="text-textSub text-sm mb-6">Star Schema architecture & DAX currency normalization.</p>
                 </div>
             </div>
         </div>
@@ -198,15 +161,14 @@
                     <div class="md:col-span-8 space-y-4">
                         <div class="flex items-center space-x-3 mb-2">
                             <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
-                            <h3 class="text-2xl font-bold text-textMain">Anomalous Claims Detector</h3>
+                            <h3 class="text-2xl font-bold text-textMain">Real-Time Fraud Risk Monitor</h3>
                         </div>
                         <p class="text-textSub leading-relaxed">
-                            A real-time monitoring system designed to flag fraud in invoice data. Leveraging statistical outlier detection to ensure data integrity for <strong>Nexum Group</strong>.
+                            An end-to-end streaming architecture for detecting anomalies in invoice data for <strong>Nexum Group</strong>.
                         </p>
                     </div>
                     <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-gray-100 pl-8">
                         <i class="fas fa-shield-halved text-4xl text-techBlue mb-4"></i>
-                        <a href="#" class="px-6 py-2 bg-gray-900 hover:bg-black text-white rounded-lg text-xs font-bold uppercase tracking-widest transition-all">Follow Progress</a>
                     </div>
                 </div>
             </div>
@@ -215,13 +177,7 @@
                 <div class="grid md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-8 space-y-4">
                         <h3 class="text-2xl font-bold text-textMain">Customer Lifetime Value (CLV) Analysis</h3>
-                        <p class="text-textSub leading-relaxed">
-                            Tying quantitative research to revenue strategy. By segmenting high-value cohorts, I recommended campaigns with a projected <span class="text-techBlue font-bold">15% revenue increase</span>.
-                        </p>
-                        <p class="text-xs font-bold uppercase tracking-widest text-techBlue">SQL Aggregation • Python Modeling • ROI Forecasting</p>
-                    </div>
-                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-gray-100 pl-8">
-                        <i class="fas fa-users-line text-4xl text-gray-300 mb-4"></i>
+                        <p class="text-textSub">Identified top 20% of customers driving 60% of revenue—recommending 15% growth strategies.</p>
                     </div>
                 </div>
             </div>
@@ -229,51 +185,49 @@
             <div class="glass-card p-10 rounded-3xl">
                 <div class="grid md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-8 space-y-4">
-                        <h3 class="text-2xl font-bold text-textMain">Time-Series Sales Forecasting</h3>
-                        <p class="text-textSub leading-relaxed">
-                            Building a model predicting monthly sales with <span class="text-techBlue font-bold">95% accuracy</span>. Transforming historical data into actionable inventory planning.
-                        </p>
-                        <p class="text-xs font-bold uppercase tracking-widest text-techBlue">Facebook Prophet • Scikit-learn • Time-series EDA</p>
+                        <h3 class="text-2xl font-bold text-textMain">Forecasting Project</h3>
+                        <p class="text-textSub">Built a model predicting monthly sales with 95% accuracy using Prophet/Scikit-learn.</p>
                     </div>
-                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-gray-100 pl-8">
-                        <i class="fas fa-crystal-ball text-4xl text-gray-300 mb-4"></i>
+                </div>
+            </div>
+
+            <div class="glass-card p-10 rounded-3xl">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 space-y-4">
+                        <h3 class="text-2xl font-bold text-textMain">KPI Automation Dashboard</h3>
+                        <p class="text-textSub">Automating multi-source KPI reporting, cutting manual reporting time from 4 hours to under 10 minutes.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-white border-t border-gray-200 text-center px-6">
-        <h3 class="text-2xl font-black mb-8 text-textMain">Connect.</h3>
-        <div class="flex justify-center space-x-12 mb-12">
-            <a href="#" class="text-gray-400 hover:text-techBlue transition-all text-2xl"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="text-gray-400 hover:text-techBlue transition-all text-2xl"><i class="fab fa-github"></i></a>
-            <a href="#" class="text-gray-400 hover:text-techBlue transition-all text-2xl"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">&copy; 2026 Seth Bowman | Cape Town, ZA</p>
-    </footer>
-
     <div id="projectModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-[999] p-6">
-        <div class="bg-white max-w-2xl w-full rounded-3xl shadow-2xl relative p-10 overflow-y-auto max-h-[85vh]">
+        <div class="bg-white max-w-3xl w-full rounded-3xl shadow-2xl relative p-10 overflow-y-auto max-h-[90vh]">
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black">
                 <i class="fas fa-xmark text-xl"></i>
             </button>
             <h2 id="modalTitle" class="text-3xl font-bold mb-6 text-textMain"></h2>
-            <div id="modalContent" class="text-textSub leading-relaxed space-y-4"></div>
+            <div id="modalContent" class="space-y-6 text-textSub text-sm leading-relaxed"></div>
         </div>
     </div>
 
 <script>
 const projectData = {
-    "Churn Prediction Engine": "Detailed analysis using PostgreSQL window functions to identify behavior markers for users at high risk of churning.",
-    "Global Retail Analytics": "Executive-level Power BI modeling utilizing a Star Schema to consolidate international sales data into a unified reporting standard.",
-    "Customer Lifetime Value (CLV) Analysis": "Using statistical segmentation to prioritize high-value user acquisitions and drive long-term business growth.",
-    "Time-Series Sales Forecasting": "Applying advanced time-series decomposition to account for seasonality and noise in retail sales data."
+    "AWS WhatsApp Chatbot": `<p>Built a serverless intake pipeline using AWS Lambda and API Gateway.</p>`,
+    "Airbnb Market Analysis": `<p>Geospatial layer mapping for ROI optimization on the Atlantic Seaboard.</p>`,
+    "Churn Prediction Engine": `<p>SQL-based behavioral segmentation identifying high-risk revenue cohorts.</p>`,
+    "Sales Pipeline Automation": `<p>Python automation cutting reporting time from 4 hours to 1 minute.</p>`,
+    "Global Retail Executive Dashboard": `<p>Star Schema & DAX normalization for multi-currency retail reporting.</p>`,
+    "Real-Time Fraud Risk Monitor": `<p>Streaming architecture for anomalous invoice detection.</p>`,
+    "Customer Lifetime Value (CLV) Analysis": `<p><strong>Why it matters:</strong> Ties data to revenue strategy. <br><strong>Hook:</strong> Identified top 20% of customers driving 60% of revenue.</p>`,
+    "Forecasting Project": `<p><strong>Why it matters:</strong> Predictive analytics for inventory. <br><strong>Hook:</strong> 95% sales prediction accuracy.</p>`,
+    "KPI Automation Dashboard": `<p><strong>Why it matters:</strong> Empowerment via automated reporting. <br><strong>Hook:</strong> Reporting time reduced from 4 hours to 10 mins.</p>`
 };
 
 function openModal(title) {
     document.getElementById("modalTitle").innerText = title;
-    document.getElementById("modalContent").innerText = projectData[title];
+    document.getElementById("modalContent").innerHTML = projectData[title] || "Details coming soon.";
     document.getElementById("projectModal").classList.remove("hidden");
     document.getElementById("projectModal").classList.add("flex");
 }
@@ -284,12 +238,9 @@ function closeModal() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const titles = document.querySelectorAll(".glass-card h3");
-    titles.forEach(el => {
-        if (projectData[el.innerText.trim()]) {
-            el.style.cursor = "pointer";
-            el.addEventListener("click", () => openModal(el.innerText.trim()));
-        }
+    document.querySelectorAll(".glass-card h3").forEach(el => {
+        el.classList.add("cursor-pointer", "hover:text-techBlue");
+        el.addEventListener("click", () => openModal(el.innerText.trim()));
     });
 });
 </script>
