@@ -1,248 +1,374 @@
 <!DOCTYPE html>
+
 <html lang="en" class="scroll-smooth">
+
 <head>
-    <link rel="icon" type="image/png" href="Assets/flavicon.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seth Bowman | Data Scientist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        techBlue: '#007AFF',
-                        surface: '#F5F7FA',
-                        card: '#FFFFFF',
-                        textMain: '#1D1D1F',
-                        textSub: '#424245',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F5F7FA; color: #1D1D1F; }
-        .glass-card { background: #FFFFFF; border: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
-        .gradient-text { background: linear-gradient(90deg, #007AFF, #5AC8FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        @keyframes border-pulse {
-            0%, 100% { border-color: rgba(0, 122, 255, 0.2); box-shadow: 0 0 0 rgba(0, 122, 255, 0); }
-            50% { border-color: rgba(0, 122, 255, 0.5); box-shadow: 0 0 20px rgba(0, 122, 255, 0.1); }
-        }
-        .animate-border-pulse {
-            animation: border-pulse 3s infinite;
-        }
-    </style>
+
+    <link rel="icon" type="image/png" href="Assets/flavicon.png">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seth Bowman | Data Analyst</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        techBlue: '#0A84FF',
+
+                        deepSpace: '#010409',
+
+                        glass: 'rgba(255, 255, 255, 0.03)',
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #010409; color: #e6edf3; }
+
+        .glass-card { background: rgba(23, 23, 23, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+
+        .gradient-text { background: linear-gradient(90deg, #0A84FF, #5AC8FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        
+
+        /* Animation for the In-Progress Card */
+
+        @keyframes border-pulse {
+
+            0%, 100% { border-color: rgba(10, 132, 255, 0.3); box-shadow: 0 0 0 rgba(10, 132, 255, 0); }
+
+            50% { border-color: rgba(10, 132, 255, 0.8); box-shadow: 0 0 15px rgba(10, 132, 255, 0.2); }
+
+        }
+
+        .animate-border-pulse {
+
+            animation: border-pulse 3s infinite;
+
+        }
+
+    </style>
+
 </head>
+
 <body class="antialiased">
 
-    <nav class="fixed w-full z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="text-xl font-extrabold tracking-tighter uppercase gradient-text">Seth Bowman</span>
-            <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-500">
-                <a href="#about" class="hover:text-techBlue transition-all">About</a>
-                <a href="#projects" class="hover:text-techBlue transition-all">Projects</a>
-                <a href="mailto:sbowman836@gmail.com" class="hover:text-techBlue transition-all">Contact</a>
+    <!-- NAVIGATION -->
+
+    <nav class="fixed w-full z-50 border-b border-white/10 bg-deepSpace/80 backdrop-blur-md">
+
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+            <span class="text-xl font-extrabold tracking-tighter uppercase gradient-text">Seth Bowman</span>
+
+            <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+
+                <a href="#about" class="hover:text-techBlue transition-all">About</a>
+
+                <a href="#projects" class="hover:text-techBlue transition-all">Projects</a>
+
+                <a href="mailto:sbowman836@gmail.com" class="hover:text-techBlue transition-all">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HEADER -->
+
+    <header class="relative pt-32 pb-20 px-6">
+
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-7 space-y-6">
+
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-techBlue/10 border border-techBlue/20 text-techBlue text-[10px] font-black uppercase tracking-widest">
+
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-techBlue opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-techBlue"></span></span>
+
+                    <span>Data Analyst & Computer Science Graduate</span>
+
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white">
+
+                    Data Analyst & <br/><span class="gradient-text">Systems Architect.</span>
+
+                </h1>
+
+                <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+
+                    BSc Computer Science graduate specializing in SQL architectures, Python automation, and scalable cloud solutions.
+
+                </p>
+
+                <div class="flex gap-4">
+
+                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-xl hover:shadow-[0_0_20px_rgba(10,132,255,0.4)] transition-all transform hover:-translate-y-1">View Portfolio</a>
+
+                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border border-white/10 hover:bg-white/5 font-bold rounded-xl transition-all">LinkedIn</a>
+
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center">
+
+                <div class="relative group">
+
+                    <div class="absolute -inset-1 bg-gradient-to-r from-techBlue to-cyan-400 rounded-3xl blur opacity-25 transition duration-1000"></div>
+
+                    <img src="Assets/headshot.png" alt="Seth Bowman" class="relative w-64 h-80 object-cover rounded-3xl transition-all duration-500 shadow-2xl border border-white/10">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="max-w-6xl mx-auto px-6 pb-24">
+
+        <div class="glass-card rounded-[2.5rem] p-10 md:p-16">
+
+            <div class="grid md:grid-cols-2 gap-16">
+
+                <div class="space-y-6">
+
+                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Biography</h2>
+
+                    <h3 class="text-3xl font-bold text-white">Technical Narrative</h3>
+
+                    <p class="text-gray-400 leading-relaxed">
+
+                        Computer Science graduate with a strong foundation in software engineering and cloud computing. Currently at <strong>Nexum Group</strong>, managing data verification and intake pipelines.
+
+                    </p>
+
+                    <p class="text-gray-400 leading-relaxed">
+
+                        Track record includes dataset administration for <strong>StudentCrowd UK</strong> and automating sales reporting for <strong>BOA Beauty Group</strong>.
+
+                    </p>
+
+                </div>
+
+                <div class="space-y-8">
+
+                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Primary Tech Stack</h2>
+
+                    <div class="grid grid-cols-2 gap-6">
+
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+
+                            <i class="fas fa-database text-techBlue text-2xl mb-3"></i>
+
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">SQL</span>
+
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+
+                            <i class="fab fa-python text-techBlue text-2xl mb-3"></i>
+
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Python</span>
+
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+
+                            <i class="fas fa-chart-pie text-techBlue text-2xl mb-3"></i>
+
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">Tableau</span>
+
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex flex-col items-center">
+
+                            <i class="fas fa-cloud text-techBlue text-2xl mb-3"></i>
+
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-white">AWS</span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="Assets/Resume.pdf" target="_blank" class="block w-full text-center py-4 bg-white/5 hover:bg-white/10 text-white font-black uppercase text-[10px] tracking-[0.3em] rounded-xl border border-white/10 transition-all">Download Full Resume</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
+
+        <div class="flex items-center justify-between mb-12">
+
+            <div>
+
+                <h2 class="text-4xl font-extrabold tracking-tighter text-white">Engineering Case Studies</h2>
+
+                <p class="text-gray-400 mt-2 text-sm">Selected works demonstrating scale, architectural decision-making, and business impact.</p>
+
+            </div>
+
+            <div class="h-1 w-24 bg-techBlue rounded-full"></div>
+
+        </div>
+
+        <!-- Existing projects here ... -->
+
+        <div class="flex items-center justify-between mb-12 mt-20">
+
+            <h2 class="text-2xl font-bold tracking-tighter text-gray-400">In Development</h2>
+
+            <div class="h-[1px] w-full ml-6 bg-white/10"></div>
+
+        </div>
+
+        <!-- Existing In-Development Card -->
+
+        <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse">
+
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+
+                <div class="md:col-span-8 space-y-4">
+
+                    <div class="flex items-center space-x-3 mb-2">
+
+                        <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
+
+                        <h3 class="text-2xl font-bold text-white">Real-Time Fraud Risk Monitor</h3>
+
+                    </div>
+
+                    <p class="text-gray-400 leading-relaxed">
+
+                        An end-to-end streaming architecture for detecting anomalies in invoice and legal claims data. Leveraging experience from <strong>Nexum Group</strong> to build scalable ingestion pipelines.
+
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 pt-2">
+
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Kafka / Kinesis</span>
+
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Spark Streaming</span>
+
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Snowflake</span>
+
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Airflow</span>
+
+                    </div>
+
+                </div>
+
+                <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
+
+                    <i class="fas fa-shield-halved text-4xl text-techBlue mb-4"></i>
+
+                    <p class="text-xs text-center text-gray-500 mb-4">Simulating event streams for fraud detection.</p>
+
+                    <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io" target="_blank" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold uppercase tracking-widest text-white transition-all">
+
+                        Follow Progress
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- NEW IN-DEV PROJECTS -->
+
+        <!-- Customer Lifetime Value (CLV) Analysis -->
+        <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse mt-8">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-8 space-y-4">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
+                        <h3 class="text-2xl font-bold text-white">Customer Lifetime Value (CLV) Analysis</h3>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Identified top 20% of customers driving 60% of revenue—recommended targeted campaigns that could increase revenue by 15%. Demonstrates SQL aggregation, Python modeling, business metrics, and visualization.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">SQL Aggregation</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Python Modeling</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Business Metrics</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Visualization</span>
+                    </div>
+                    <a href="#" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold uppercase tracking-widest text-white transition-all">
+                        Follow Progress
+                    </a>
+                </div>
+                <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
+                    <i class="fas fa-users text-4xl text-techBlue mb-4"></i>
+                    <p class="text-xs text-center text-gray-500 mb-4">Segmenting customers by value for revenue optimization.</p>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <header class="relative pt-32 pb-20 px-6">
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-techBlue/10 border border-techBlue/20 text-techBlue text-[10px] font-black uppercase tracking-widest">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-techBlue opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-techBlue"></span></span>
-                    <span>Data Analyst & Computer Science Undergraduate</span>
-                </div>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-textMain">
-                    Data Science & <br/><span class="gradient-text">Statistical Insights.</span>
-                </h1>
-                <p class="text-lg text-textSub max-w-lg leading-relaxed">
-                    Computer Science undergraduate specializing in predictive modeling, exploratory data analysis (EDA), and turning raw datasets into strategic business decisions.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-xl hover:shadow-[0_10px_20px_rgba(0,122,255,0.3)] transition-all transform hover:-translate-y-1">View Insights</a>
-                    <a href="https://www.linkedin.com/in/seth-emanuelle-bowman-37a547138/" target="_blank" class="px-8 py-4 border border-gray-200 hover:bg-gray-50 font-bold rounded-xl transition-all">LinkedIn</a>
-                </div>
-            </div>
-            <div class="lg:col-span-5 flex justify-center">
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-techBlue to-cyan-400 rounded-3xl blur opacity-20 transition duration-1000"></div>
-                    <img src="Assets/headshot.png" alt="Seth Bowman" class="relative w-64 h-80 object-cover rounded-3xl transition-all duration-500 shadow-xl border border-white">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
-        <div class="flex items-center justify-between mb-12">
-            <h2 class="text-4xl font-extrabold tracking-tighter text-textMain">Engineering Case Studies</h2>
-            <div class="h-1 w-24 bg-techBlue rounded-full"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-robot text-xl"></i>
-                        </div>
-                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Serverless</span>
+        <!-- Forecasting Project -->
+        <div class="glass-card p-10 rounded-3xl border border-techBlue/50 animate-border-pulse mt-8">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-8 space-y-4">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
+                        <h3 class="text-2xl font-bold text-white">Forecasting Project</h3>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-textMain">AWS WhatsApp Chatbot</h3>
-                    <p class="text-textSub text-sm mb-6">Automated 24/7 customer intake pipeline using AWS Lambda.</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-map-location-dot text-xl"></i>
-                        </div>
-                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Geospatial</span>
+                    <p class="text-gray-400 leading-relaxed">
+                        Built a model predicting monthly sales with 95% accuracy, enabling proactive inventory planning. Demonstrates time-series analysis, Python (Prophet/Scikit-learn), SQL, and dashboarding in Tableau/Power BI.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Time-Series Analysis</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Python (Prophet/Scikit-learn)</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">SQL</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300">Tableau/Power BI</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-textMain">Airbnb Market Analysis</h3>
-                    <p class="text-textSub text-sm mb-6">Investment ROI mapping for the Atlantic Seaboard.</p>
+                    <a href="#" class="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs font-bold uppercase tracking-widest text-white transition-all">
+                        Follow Progress
+                    </a>
                 </div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-user-minus text-xl"></i>
-                        </div>
-                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">SQL/ML</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-textMain">Churn Prediction Engine</h3>
-                    <p class="text-textSub text-sm mb-6">Revenue retention modeling using PostgreSQL.</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-code-branch text-xl"></i>
-                        </div>
-                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">ETL</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-textMain">Sales Pipeline Automation</h3>
-                    <p class="text-textSub text-sm mb-6">Python/Pandas aggregation for monthly financial reporting.</p>
-                </div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-techBlue/10 flex items-center justify-center text-techBlue group-hover:bg-techBlue group-hover:text-white transition-all">
-                            <i class="fas fa-chart-simple text-xl"></i>
-                        </div>
-                        <span class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-600 rounded-lg">Power BI</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-textMain">Global Retail Executive Dashboard</h3>
-                    <p class="text-textSub text-sm mb-6">Star Schema architecture & DAX currency normalization.</p>
+                <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-white/10 pl-8">
+                    <i class="fas fa-chart-line text-4xl text-techBlue mb-4"></i>
+                    <p class="text-xs text-center text-gray-500 mb-4">Predicting future trends from historical data.</p>
                 </div>
             </div>
         </div>
 
-        <div class="flex items-center justify-between mb-12 mt-20">
-            <h2 class="text-2xl font-bold tracking-tighter text-gray-400">In Development</h2>
-            <div class="h-[1px] w-full ml-6 bg-gray-200"></div>
-        </div>
-
-        <div class="space-y-8">
-            <div class="glass-card p-10 rounded-3xl border border-techBlue/30 animate-border-pulse">
-                <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <div class="md:col-span-8 space-y-4">
-                        <div class="flex items-center space-x-3 mb-2">
-                            <span class="px-3 py-1 bg-techBlue text-white text-[10px] font-black uppercase tracking-widest rounded-full">Active</span>
-                            <h3 class="text-2xl font-bold text-textMain">Real-Time Fraud Risk Monitor</h3>
-                        </div>
-                        <p class="text-textSub leading-relaxed">
-                            An end-to-end streaming architecture for detecting anomalies in invoice data for <strong>Nexum Group</strong>.
-                        </p>
-                    </div>
-                    <div class="md:col-span-4 flex flex-col items-center justify-center border-l border-gray-100 pl-8">
-                        <i class="fas fa-shield-halved text-4xl text-techBlue mb-4"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-10 rounded-3xl">
-                <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <div class="md:col-span-8 space-y-4">
-                        <h3 class="text-2xl font-bold text-textMain">Customer Lifetime Value (CLV) Analysis</h3>
-                        <p class="text-textSub">Identified top 20% of customers driving 60% of revenue—recommending 15% growth strategies.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-10 rounded-3xl">
-                <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <div class="md:col-span-8 space-y-4">
-                        <h3 class="text-2xl font-bold text-textMain">Forecasting Project</h3>
-                        <p class="text-textSub">Built a model predicting monthly sales with 95% accuracy using Prophet/Scikit-learn.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-10 rounded-3xl">
-                <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <div class="md:col-span-8 space-y-4">
-                        <h3 class="text-2xl font-bold text-textMain">KPI Automation Dashboard</h3>
-                        <p class="text-textSub">Automating multi-source KPI reporting, cutting manual reporting time from 4 hours to under 10 minutes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="projectModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-[999] p-6">
-        <div class="bg-white max-w-3xl w-full rounded-3xl shadow-2xl relative p-10 overflow-y-auto max-h-[90vh]">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black">
-                <i class="fas fa-xmark text-xl"></i>
-            </button>
-            <h2 id="modalTitle" class="text-3xl font-bold mb-6 text-textMain"></h2>
-            <div id="modalContent" class="space-y-6 text-textSub text-sm leading-relaxed"></div>
-        </div>
-    </div>
-
-<script>
-const projectData = {
-    "AWS WhatsApp Chatbot": `<p>Built a serverless intake pipeline using AWS Lambda and API Gateway.</p>`,
-    "Airbnb Market Analysis": `<p>Geospatial layer mapping for ROI optimization on the Atlantic Seaboard.</p>`,
-    "Churn Prediction Engine": `<p>SQL-based behavioral segmentation identifying high-risk revenue cohorts.</p>`,
-    "Sales Pipeline Automation": `<p>Python automation cutting reporting time from 4 hours to 1 minute.</p>`,
-    "Global Retail Executive Dashboard": `<p>Star Schema & DAX normalization for multi-currency retail reporting.</p>`,
-    "Real-Time Fraud Risk Monitor": `<p>Streaming architecture for anomalous invoice detection.</p>`,
-    "Customer Lifetime Value (CLV) Analysis": `<p><strong>Why it matters:</strong> Ties data to revenue strategy. <br><strong>Hook:</strong> Identified top 20% of customers driving 60% of revenue.</p>`,
-    "Forecasting Project": `<p><strong>Why it matters:</strong> Predictive analytics for inventory. <br><strong>Hook:</strong> 95% sales prediction accuracy.</p>`,
-    "KPI Automation Dashboard": `<p><strong>Why it matters:</strong> Empowerment via automated reporting. <br><strong>Hook:</strong> Reporting time reduced from 4 hours to 10 mins.</p>`
-};
-
-function openModal(title) {
-    document.getElementById("modalTitle").innerText = title;
-    document.getElementById("modalContent").innerHTML = projectData[title] || "Details coming soon.";
-    document.getElementById("projectModal").classList.remove("hidden");
-    document.getElementById("projectModal").classList.add("flex");
-}
-
-function closeModal() {
-    document.getElementById("projectModal").classList.add("hidden");
-    document.getElementById("projectModal").classList.remove("flex");
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".glass-card h3").forEach(el => {
-        el.classList.add("cursor-pointer", "hover:text-techBlue");
-        el.addEventListener("click", () => openModal(el.innerText.trim()));
-    });
-});
-</script>
-</body>
-</html>
+        <!-- KPI Automation Dashboard -->
+        <div class="glass-card p-
