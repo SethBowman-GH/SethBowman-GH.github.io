@@ -29,10 +29,17 @@
         .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.2); margin-left: 10px; }
         .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
 
-        /* Projects Section */
-        section { padding: 5rem 10%; max-width: 1400px; margin: 0 auto; }
-        .section-title { font-size: 2rem; color: var(--primary); margin-bottom: 3rem; border-left: 5px solid var(--accent); padding-left: 20px; }
-        
+        /* Sections */
+        section { padding: 5rem 10%; max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 2rem; color: var(--primary); margin-bottom: 2rem; border-left: 5px solid var(--accent); padding-left: 20px; }
+
+        /* About Section (Restored) */
+        .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start; }
+        .skill-list { list-style: none; padding: 0; }
+        .skill-list li { background: white; border-bottom: 1px solid #e2e8f0; padding: 10px; display: flex; justify-content: space-between; }
+        .skill-list li span { font-weight: bold; color: var(--primary); }
+
+        /* Projects Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
         
         .card { 
@@ -69,6 +76,11 @@
 
         /* Footer */
         footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 3rem; margin-top: 4rem; }
+        
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -90,6 +102,32 @@
             <a href="Resume.pdf" target="_blank" class="btn btn-outline">Download Resume <i class="fas fa-download"></i></a>
         </div>
     </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div>
+                <p style="font-size: 1.1rem; color: #475569;">
+                    I am a <strong>Computer Science Graduate</strong> bridging the gap between technical software engineering and actionable business intelligence. 
+                </p>
+                <p>
+                    Currently, I serve as an <strong>Intake Specialist at Nexum Group</strong>, where I optimize "Intake to Recovery" pipelines through advanced data verification. My background includes managing large-scale educational datasets for <strong>StudentCrowd UK</strong> and driving sales performance via <strong>Shopify Analytics for BOA Beauty Group</strong>.
+                </p>
+                <p>
+                    I thrive on ensuring data integrity, whether I am normalizing datasets with SQL, building Python automation scripts, or designing dashboards that drive strategy.
+                </p>
+            </div>
+            <div>
+                <h3 style="margin-top:0;">Core Competencies</h3>
+                <ul class="skill-list">
+                    <li><span>Data Analysis</span> Python, SQL, Excel</li>
+                    <li><span>Visualization</span> Metabase, Tableau</li>
+                    <li><span>Web & Cloud</span> JavaScript, IBM Cloud</li>
+                    <li><span>Tools</span> Jira, Git, Shopify</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section id="projects">
         <h2 class="section-title">Selected Projects</h2>
