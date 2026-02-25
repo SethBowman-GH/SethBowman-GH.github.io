@@ -16,21 +16,21 @@ Computer Science graduate specializing in transforming raw datasets into strateg
 
 ## Featured Projects
 
-### [AWS WhatsApp Chatbot](https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/README.md)
+### [AWS WhatsApp Chatbot]
 A serverless AI-powered chatbot designed with AWS Cloud Architecture.
 * Infrastructure: Leverages AWS Lambda for scaling and AWS Secrets Manager for secure authentication with the WhatsApp Cloud API.
 * Automation: Built using Python to handle real-time messaging payloads and auto-responses.
 
-### [Cape Town Airbnb Market Heatmap (Tableau)](https://public.tableau.com/shared/MF256ZT75)
+### [Cape Town Airbnb Market Heatmap (Tableau)]
 Geospatial analysis of 15,000+ rental listings using Tableau Public.
 * Visual Strategy: Developed an interactive heatmap to identify premium ROI clusters and market saturation zones.
 * Data Normalization: Cleaned and scaled pricing data to handle extreme outliers and provide accurate market snapshots.
 
-### [Churn Prediction Architecture (SQL)](https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/2_analysis.sql)
+### [Churn Prediction Architecture (SQL)]
 Relational database model designed to isolate revenue loss risks.
 * Logic: Utilized Advanced SQL (CTEs and Window Functions) to segment high-value customers based on behavioral risk factors.
 
-### [Automated ETL Sales Pipeline](https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/DataCleaning_Visualization.ipynb)
+### [Automated ETL Sales Pipeline]
 Python-based automation for high-volume sales auditing.
 * Efficiency: Used Pandas to automate cleaning, aggregation, and reporting, reducing manual processing time by approximately 40%.
 
