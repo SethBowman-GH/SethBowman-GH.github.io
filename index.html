@@ -6,7 +6,7 @@
     <title>Seth Bowman | Data Operations Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             darkMode: 'class', // Enables manual toggling
@@ -15,14 +15,14 @@
                     colors: {
                         techBlue: '#0A84FF',
                         // These now point to CSS variables for swapping
-                        deepSpace: 'var(--bg-color)', 
+                        deepSpace: 'var(--bg-color)',
                         glass: 'var(--glass-bg)',
                     }
                 }
             }
         }
     </script>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
 
@@ -47,24 +47,24 @@
             --nav-bg: rgba(1, 4, 9, 0.8);
         }
 
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--text-main); 
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .glass-card { 
-            background: var(--glass-bg); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid var(--glass-border); 
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
             transition: background 0.3s ease, border-color 0.3s ease;
         }
 
-        .gradient-text { 
-            background: linear-gradient(90deg, #0A84FF, #5AC8FA); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+        .gradient-text {
+            background: linear-gradient(90deg, #0A84FF, #5AC8FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* --- LIGHT MODE OVERRIDES --- */
@@ -77,7 +77,7 @@
         html:not(.dark) .bg-white\/10 { background-color: rgba(0,0,0,0.1) !important; }
         html:not(.dark) .border-white\/10 { border-color: rgba(0,0,0,0.1) !important; }
         html:not(.dark) .border-white\/5 { border-color: rgba(0,0,0,0.1) !important; }
-        
+
         /* Nav Bar Background Adaptation */
         nav { transition: background-color 0.3s ease, border-color 0.3s ease; }
         html:not(.dark) nav { background-color: var(--nav-bg) !important; border-bottom: 1px solid rgba(0,0,0,0.1); }
@@ -100,7 +100,7 @@
                 <a href="#about" class="hover:text-techBlue transition-all hidden md:block">About</a>
                 <a href="#projects" class="hover:text-techBlue transition-all hidden md:block">Projects</a>
                 <a href="mailto:sbowman836@gmail.com" class="hover:text-techBlue transition-all hidden md:block">Contact</a>
-                
+
                 <button id="theme-toggle" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all text-techBlue hover:text-white">
                     <i class="fas fa-sun hidden dark:block"></i> <i class="fas fa-moon block dark:hidden"></i> </button>
 
@@ -119,7 +119,7 @@
                     Data Operations Analyst & <br/><span class="gradient-text">Insight Specialist.</span>
                 </h1>
                 <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
-                    BSc Computer Science undergraduate specializing in SQL analytics, Python automation, and scalable data solutions.
+                    BSc Computer Science graduate working in SQL, ETL and data operations across legal services, edtech and e-commerce.
                 </p>
                 <div class="flex gap-4">
                     <a href="#projects" class="px-8 py-4 bg-techBlue text-white font-bold rounded-xl hover:shadow-[0_0_20px_rgba(10,132,255,0.4)] transition-all transform hover:-translate-y-1">View Portfolio</a>
@@ -142,7 +142,7 @@
                     <h2 class="text-xs font-black uppercase tracking-[0.3em] text-techBlue">Biography</h2>
                     <h3 class="text-3xl font-bold text-white">Technical Narrative</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        Computer Science undergraduate with a strong foundation in statistical analysis and data mining. Currently at <strong>Nexum Group</strong>, managing data verification and intake pipelines.
+                        Computer Science graduate working on the operational side of data: SQL, ETL and data quality. Currently at <strong>Nexum Group</strong>, maintaining the intake to recovery pipeline and resolving data discrepancies.
                     </p>
                     <p class="text-gray-400 leading-relaxed">
                         Track record includes dataset administration for <strong>StudentCrowd UK</strong> and automating sales reporting for <strong>BOA Beauty Group</strong>.
@@ -177,8 +177,8 @@
     <section id="projects" class="max-w-6xl mx-auto px-6 pb-32">
         <div class="flex items-center justify-between mb-12">
             <div>
-                <h2 class="text-4xl font-extrabold tracking-tighter text-white">Analytical Case Studies</h2>
-                <p class="text-gray-400 mt-2 text-sm">Selected works demonstrating scale, analytical decision-making, and business impact.</p>
+                <h2 class="text-4xl font-extrabold tracking-tighter text-white">Case Studies</h2>
+                <p class="text-gray-400 mt-2 text-sm">Selected works demonstrating scale, engineering decisions, and business impact.</p>
             </div>
             <div class="h-1 w-24 bg-techBlue rounded-full"></div>
         </div>
@@ -196,10 +196,10 @@
                         </div>
                         <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Python & SQL ETL</span>
                     </div>
-                    
+
                     <h3 class="text-2xl font-bold mb-2 text-white">Market Intelligence Pipeline</h3>
                     <p class="text-gray-400 text-sm mb-6">Automated news extraction and relational data warehousing.</p>
-                    
+
                     <div class="space-y-3 mb-8">
                         <div class="flex items-start space-x-3 text-sm text-gray-300">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
@@ -222,7 +222,7 @@
                         </a>
                         <a href="Assets/scraped_data.png" target="_blank" class="inline-flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-gray-400 hover:text-techBlue transition-colors">
                             <i class="fas fa-eye"></i>
-                            
+
                         </a>
                     </div>
                 </div>
@@ -239,10 +239,10 @@
                         </div>
                         <span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-gray-300 rounded-lg">Serverless Data Pipeline</span>
                     </div>
-                    
+
                     <h3 class="text-2xl font-bold mb-2 text-white">AWS WhatsApp Chatbot</h3>
                     <p class="text-gray-400 text-sm mb-6">Automated 24/7 customer intake pipeline.</p>
-                    
+
                     <div class="space-y-3 mb-8">
                         <div class="flex items-start space-x-3 text-sm text-gray-300">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
@@ -279,7 +279,7 @@
 
                     <h3 class="text-2xl font-bold mb-2 text-white">Airbnb Market Analysis</h3>
                     <p class="text-gray-400 text-sm mb-6">Investment ROI mapping for the Atlantic Seaboard.</p>
-                    
+
                     <div class="space-y-3 mb-8">
                         <div class="flex items-start space-x-3 text-sm text-gray-300">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
@@ -316,7 +316,7 @@
 
                     <h3 class="text-2xl font-bold mb-2 text-white">Churn Prediction Engine</h3>
                     <p class="text-gray-400 text-sm mb-6">Revenue retention modeling using PostgreSQL.</p>
-                    
+
                     <div class="space-y-3 mb-8">
                         <div class="flex items-start space-x-3 text-sm text-gray-300">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
@@ -353,7 +353,7 @@
 
                     <h3 class="text-2xl font-bold mb-2 text-white">Sales Pipeline Automation</h3>
                     <p class="text-gray-400 text-sm mb-6">Python/Pandas aggregation for monthly financial reporting.</p>
-                    
+
                     <div class="space-y-3 mb-8">
                         <div class="flex items-start space-x-3 text-sm text-gray-300">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
@@ -365,7 +365,7 @@
                         </div>
                         <div class="flex items-start space-x-3 text-sm text-gray-300">
                             <i class="fas fa-chart-line text-techBlue mt-1"></i>
-                            <span><strong>Result:</strong> Reduced process time by <span class="text-white font-bold">95% (to < 1 min)</span> and eliminated calculation errors.</span>
+                            <span><strong>Result:</strong> Reduced process time by <span class="text-white font-bold">95% (to &lt;1 min)</span> and eliminated calculation errors.</span>
                         </div>
                     </div>
 
@@ -390,7 +390,7 @@
 
                     <h3 class="text-2xl font-bold mb-2 text-white">Global Retail Executive Dashboard</h3>
                     <p class="text-gray-400 text-sm mb-6">Star Schema architecture & DAX currency normalization.</p>
-                    
+
                     <div class="space-y-3 mb-8">
                         <div class="flex items-start space-x-3 text-sm text-gray-300">
                             <i class="fas fa-check-circle text-techBlue mt-1"></i>
@@ -459,7 +459,7 @@
 
         <div class="max-w-xl mx-auto mb-8 p-6 rounded-2xl bg-white/5 border border-white/5 text-[10px] text-gray-500 font-medium leading-relaxed">
             <p class="uppercase tracking-widest mb-2 font-black text-techBlue">Technical Specifications</p>
-            <p class="mb-4 text-center">Built with **Tailwind CSS v3.0** and **Plus Jakarta Sans**. All source code is available for inspection.</p>
+            <p class="mb-4 text-center">Built with <strong>Tailwind CSS v3.0</strong> and <strong>Plus Jakarta Sans</strong>. All source code is available for inspection.</p>
             <a href="https://github.com/SethBowman-GH/SethBowman-GH.github.io/blob/main/index.html" target="_blank" class="inline-block px-4 py-2 border border-white/10 rounded-lg hover:bg-white/5 hover:text-white transition-all">
                 <i class="fas fa-code mr-2"></i>View Page Source
             </a>
@@ -471,7 +471,7 @@
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
-        
+
         // On Load: Check Local Storage
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
